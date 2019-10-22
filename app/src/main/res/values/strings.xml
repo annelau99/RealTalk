@@ -2,4 +2,5 @@
     <string name="app_name">My First App</string>
     <string name="hello_world_text">0</string>
     <string name="random_heading">Hello</string>
+    <string name="commitmessage">Commit</string>
 </resources>
