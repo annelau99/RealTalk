@@ -38,13 +38,14 @@
         android:id="@+id/submitbutton"
         android:layout_width="356dp"
         android:layout_height="39dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="180dp"
-        android:onClick="login"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/phoneNum"
@@ -54,6 +55,7 @@
         android:ems="10"
         android:hint="@string/phone_num_ex"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/prompt2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prompt" />

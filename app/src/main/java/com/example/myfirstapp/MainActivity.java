@@ -37,7 +37,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /*public void login(View view){
+    public void toastMe(View view){
+        // Toast myToast = Toast.makeText(this, message, duration);
+        Toast myToast = Toast.makeText(this, "You submitted",
+                Toast.LENGTH_SHORT);
+        myToast.show();
+    }
+
+
+     /*public void login(View view){
         phoneInput = (EditText) findViewById(R.id.phoneNum);
         passInput = (EditText) findViewById(R.id.password);
         submit = (Button) findViewById(R.id.submitbutton);
@@ -51,14 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }*/
-
-    public void toastMe(View view){
-        // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = Toast.makeText(this, "You submitted",
-                Toast.LENGTH_SHORT);
-        myToast.show();
-    }
-
 
     /*public void countMe (View view) {
         // Get the text view.
