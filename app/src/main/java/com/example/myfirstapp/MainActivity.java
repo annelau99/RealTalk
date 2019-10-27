@@ -5,16 +5,34 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    String PhoneNumber, Name;
+
+    EditText name, phone, age, password;
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        name = (EditText) findViewById(R.id.nameinput);
+        age = (EditText) findViewById(R.id.ageinput);
+        phone = (EditText) findViewById(R.id.phoneinput);
+        password = (EditText) findViewById(R.id.passwordinput);
+
+        submit = (Button) findViewById(R.id.signup_button);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //edit stuff here !!
+            }
+        });
     }
 
     public void toastMe(View view){
@@ -27,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void countMe (View view) {
         // Get the text view.
         TextView showCountTextView = (TextView)
-                findViewById(R.id.textView);
+                findViewById(R.id.introduction);
 
         // Get the value of the text view.
         String countString = showCountTextView.getText().toString();
@@ -48,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         Intent randomIntent = new Intent(this, SecondActivity.class);
 
         // Get the text view that shows the count.
-        TextView showCountTextView = (TextView) findViewById(R.id.textView);
+        TextView showCountTextView = (TextView) findViewById(R.id.introduction);
 
         // Get the value of the text view.
         String countString = showCountTextView.getText().toString();

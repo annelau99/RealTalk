@@ -42,7 +42,7 @@ public class SecondActivity extends AppCompatActivity {
 
         // Substitute the max value into the string resource
         // for the heading, and update the heading
-        headingView.setText(getString(R.string.random_heading, count));
+
     }
 
 

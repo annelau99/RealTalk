@@ -7,56 +7,95 @@
     android:background="@color/screenback"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/hello_world_text"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/count_button"
-        android:onClick="countMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="32dp"
-        android:text="Count"
-        app:layout_constraintEnd_toStartOf="@+id/random_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/toast_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="40dp"
-        android:text="Toast"
-        android:onClick="toastMe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/count_button"
-        app:layout_constraintHorizontal_bias="1.0"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="338dp"
+        android:layout_height="466dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/random_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create your account!"
+            android:textAlignment="textStart"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/nameinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="name" />
+
+        <EditText
+            android:id="@+id/ageinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Age" />
+
+        <EditText
+            android:id="@+id/phoneinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="000-000-8888"
+            android:inputType="phone"
+            android:text="Phone Number"
+            android:textAlignment="textStart"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/passwordinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textWebPassword"
+            android:text="Password" />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="200dp"
+            android:onClick="toastMe"
+            android:text="Submit"
+            android:textAlignment="center"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/random_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="224dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
         android:onClick="randomMe"
         android:text="Random"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/count_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:onClick="countMe"
+        android:text="Count"
+        app:layout_constraintEnd_toStartOf="@+id/random_button"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
