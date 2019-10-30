@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Real Talk</string>
     <string name="welcome">Welcome to Real Talk!</string>
-    <string name="random_heading">Hello</string>
     <string name="phone_prompt">Enter your mobile phone number</string>
     <string name="pass_prompt">Enter your password</string>
     <string name="submit">submit</string>
     <string name="phone_num_ex">(012)3456789</string>
     <string name="password_ex">password</string>
+
+    <string name="info">Enter Your Information</string>
+    <string name="age">Age</string>
 </resources>

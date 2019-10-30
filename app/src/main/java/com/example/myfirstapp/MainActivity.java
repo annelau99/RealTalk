@@ -12,10 +12,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    String PhoneNumber, password;
-    EditText phoneInput;
-    EditText passInput;
-    Button submit;
+    private String PhoneNumber, password;
+    private EditText phoneInput;
+    private EditText passInput;
+    private Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 password = passInput.getText().toString();
 
                 toastMe(v);
+                openInfoPage();
             }
         });
+    }
+
+    //function that opens info page activity_second
+    public void openInfoPage(){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     public void toastMe(View view){
