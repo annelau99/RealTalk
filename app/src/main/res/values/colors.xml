@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#5D576B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="screenback">#E8D7F1</color>
+    <color name="white">#ffffff</color>
+    <color name="buttonColor">#F8A489</color>
 </resources>

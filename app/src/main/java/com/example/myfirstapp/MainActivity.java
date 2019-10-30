@@ -38,15 +38,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //function that opens info page activity_second
+    //function that opens second page
     public void openInfoPage(){
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
 
+    //function that displays "submitted" message
     public void toastMe(View view){
         // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = Toast.makeText(this, "You submitted",
+        Toast myToast = Toast.makeText(this, "You submitted!",
                 Toast.LENGTH_SHORT);
         myToast.show();
     }
