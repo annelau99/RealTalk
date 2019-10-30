@@ -34,14 +34,15 @@ public class SecondActivity extends AppCompatActivity {
                 gender = genderInput.getText().toString();
                 sexualActivity = sexInput.getText().toString();
 
-                //openNextPage();
+                openNextPage();
             }
         });
     }
 
     public void openNextPage() {
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, Activity_LastTime.class);
         startActivity(intent);
     }
+
 
 }
