@@ -30,7 +30,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="310dp"
-        android:layout_marginBottom="599dp"
+        android:layout_marginBottom="604dp"
         android:text="@string/age"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorPrimary"
