@@ -22,9 +22,9 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        /*ageInput = (EditText) findViewById(R.id.age);
-        genderInput = (EditText) findViewById(R.id.gender);
-        sexInput = (EditText) findViewById(R.id.sexual_activity);
+        ageInput = (EditText) findViewById(R.id.age_num);
+        genderInput = (EditText) findViewById(R.id.gender_user);
+        sexInput = (EditText) findViewById(R.id.sexact_user);
 
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +36,7 @@ public class SecondActivity extends AppCompatActivity {
 
                 //openNextPage();
             }
-        });*/
+        });
     }
 
     public void openNextPage() {

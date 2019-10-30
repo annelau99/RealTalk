@@ -15,4 +15,9 @@
     <string name="gender">Gender</string>
     <string name="sex_act">Sexual Activity</string>
     <string name="genderhint">male/female/non binary</string>
+    <string name="bubble">chat icon</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
