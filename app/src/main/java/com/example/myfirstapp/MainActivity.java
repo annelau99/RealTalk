@@ -5,47 +5,73 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    String PhoneNumber, Name;
-
-    EditText name, phone, age, password;
-    Button submit;
+    private String PhoneNumber, password;
+    private EditText phoneInput;
+    private EditText passInput;
+    private Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        name = (EditText) findViewById(R.id.nameinput);
-        age = (EditText) findViewById(R.id.ageinput);
-        phone = (EditText) findViewById(R.id.phoneinput);
-        password = (EditText) findViewById(R.id.passwordinput);
 
-        submit = (Button) findViewById(R.id.signup_button);
+        phoneInput = (EditText) findViewById(R.id.phoneNum);
+        passInput = (EditText) findViewById(R.id.password);
+
+        submit = (Button) findViewById(R.id.submitbutton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //edit stuff here !!
+                PhoneNumber = phoneInput.getText().toString();
+                password = passInput.getText().toString();
+
+                toastMe(v);
+                openInfoPage();
             }
         });
     }
 
+    //function that opens second page
+    public void openInfoPage(){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    //function that displays "submitted" message
     public void toastMe(View view){
         // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = Toast.makeText(this, "Hello Toast!",
+        Toast myToast = Toast.makeText(this, "You submitted!",
                 Toast.LENGTH_SHORT);
         myToast.show();
     }
 
-    public void countMe (View view) {
+
+     /*public void login(View view){
+        phoneInput = (EditText) findViewById(R.id.phoneNum);
+        passInput = (EditText) findViewById(R.id.password);
+        submit = (Button) findViewById(R.id.submitbutton);
+        submit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void OnClick(view) {
+                PhoneNumber = phoneInput.getText().toString();
+                password = passInput.getText().toString();
+
+                toastMe(view);
+            }
+        });
+    }*/
+
+    /*public void countMe (View view) {
         // Get the text view.
         TextView showCountTextView = (TextView)
-                findViewById(R.id.introduction);
+                findViewById(R.id.welcome);
 
         // Get the value of the text view.
         String countString = showCountTextView.getText().toString();
@@ -66,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         Intent randomIntent = new Intent(this, SecondActivity.class);
 
         // Get the text view that shows the count.
-        TextView showCountTextView = (TextView) findViewById(R.id.introduction);
+        TextView showCountTextView = (TextView) findViewById(R.id.welcome);
 
         // Get the value of the text view.
         String countString = showCountTextView.getText().toString();
@@ -79,6 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Start the new activity.
         startActivity(randomIntent);
-    }
+    }*/
 
 }
