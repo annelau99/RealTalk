@@ -36,13 +36,12 @@ public class Activity_LastTime extends AppCompatActivity {
                 openNextPage(SecondActivity.class);
             }
         });
-        /*right.setOnClickListener(new View.OnClickListener() {
+        right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(SecondActivity.class);
+                openNextPage(Activity_CheckIn.class);
             }
-        });*/
-
+        });
 
     }
 

@@ -25,9 +25,31 @@
 
     //what did we talk about last time strings
     <string name="lasttime_heading">What we talked about last time: </string>
+    <string name="helptoday">What do you need \nhelp with today? > </string>
+
+    //what do you want to learn today strings
+    <string name="checkin_heading">What do you want to learn about today? </string>
+
+    //symptoms
     <string name="pregnancy">Pregnancy</string>
     <string name="childHealth">Child Health</string>
     <string name="babymed">Baby Medicine</string>
-    <string name="helptoday">What do you need \nhelp with today? > </string>
+    <string name="postpregnancy">Post Pregnancy</string>
+    <string name="sexhealth">Sexual Health</string>
+    <string name="menstruation">Menstruation</string>
+    <string name="products">Menstrual Products</string>
+    <string name="buyingprod">Buying Products</string>
+    <string name="tampons">Menstrual Tampons</string>
+    <string name="pads">Menstrual Pads</string>
+    <string name="birthcontrol">Birth Control</string>
+    <string name="HIVAIDS">HIV and AIDS</string>
+    <string name="headache">HeadAche</string>
+    <string name="stomachpain">Stomach Pains</string>
+    <string name="backpain">Back Pains</string>
+    <string name="cough">Cough</string>
+    <string name="swollenfeet">Swollen Feet</string>
 
+    //Case Information
+    <string name="caseheading">Case Summary</string>
+    <string name="symptoms">Symptoms: </string>
 </resources>
