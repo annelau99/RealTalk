@@ -9,10 +9,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="398dp"
+        android:layout_height="606dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438">
 
         <TextView
             android:id="@+id/enter_info"
@@ -32,70 +38,149 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.791" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/age"
+            android:id="@+id/newname"
+            android:layout_width="156dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/name"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/editname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_info" />
+
+        <EditText
+            android:id="@+id/editname"
+            android:layout_width="365dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint="@string/namehint"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_info"
+            app:layout_constraintVertical_bias="0.958" />
+
+        <TextView
+            android:id="@+id/newnumber"
             android:layout_width="156dp"
             android:layout_height="35dp"
             android:layout_marginStart="16dp"
             android:text="@string/age"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/age_num"
+            app:layout_constraintBottom_toTopOf="@+id/editnumber"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_info"
-            app:layout_constraintVertical_bias="0.523" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/age_num"
-            android:layout_width="365dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="80dp"
+            android:id="@+id/editnumber"
+            android:layout_width="370dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="272dp"
             android:background="@drawable/rounded_corner"
             android:ems="10"
             android:hint="@string/agehint"
             android:inputType="number"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/gender"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_info" />
+            app:layout_constraintTop_toBottomOf="@+id/enter_info"
+            app:layout_constraintVertical_bias="0.86" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="156dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/number"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/age_num"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/age_num"
+            android:layout_width="365dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint="@string/numberhint"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/newnumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_info"
+            app:layout_constraintVertical_bias="0.979" />
 
         <TextView
             android:id="@+id/gender"
             android:layout_width="122dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
             android:layout_marginEnd="250dp"
             android:text="@string/gender"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/gender_user"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/age_num" />
+            app:layout_constraintTop_toBottomOf="@+id/editnumber" />
 
         <EditText
             android:id="@+id/gender_user"
             android:layout_width="365dp"
             android:layout_height="50dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="72dp"
             android:background="@drawable/rounded_corner"
             android:ems="10"
             android:hint="@string/genderhint"
             android:inputType="textPersonName"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/sexual_activity"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_info" />
+            app:layout_constraintTop_toBottomOf="@+id/editnumber" />
+
+        <EditText
+            android:id="@+id/sexact_user"
+            android:layout_width="366dp"
+            android:layout_height="66dp"
+            android:autofillHints=""
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint="@string/activityhint"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_user" />
 
         <TextView
             android:id="@+id/sexual_activity"
@@ -107,28 +192,10 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/sexact_user"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender_user" />
-
-        <EditText
-            android:id="@+id/sexact_user"
-            android:layout_width="365dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="350dp"
-            android:autofillHints=""
-            android:background="@drawable/rounded_corner"
-            android:ems="10"
-            android:hint="@string/activityhint"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.586"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_info"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/gender_user"
+            app:layout_constraintVertical_bias="0.905" />
 
         <Button
             android:id="@+id/submit"
