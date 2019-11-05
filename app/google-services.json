@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "915797925991",
+    "firebase_url": "https://real-talk-f80e0.firebaseio.com",
+    "project_id": "real-talk-f80e0",
+    "storage_bucket": "real-talk-f80e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915797925991:android:77bccbeccaa921e0e9b4c2",
+        "android_client_info": {
+          "package_name": "com.example.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915797925991-06l4a91hvk4mati7ilsc63ae2r98js7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwHAXCU4oHJzWHXoOwiJFhoikAAQanbDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915797925991-06l4a91hvk4mati7ilsc63ae2r98js7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
