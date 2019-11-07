@@ -69,7 +69,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void openNextPage() {
-        Intent intent = new Intent(this, Activity_LastTime.class);
+        Intent intent = new Intent(this, All_Cases.class);
         startActivity(intent);
     }
 

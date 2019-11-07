@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private String PhoneNumber, password;
     private EditText phoneInput;
     private EditText passInput;
-    private Button submit;
+    private Button submit, register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 openInfoPage();
             }
         });
+
+        register = (Button) findViewById(R.id.submitbutton2);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLastTimePage();
+            }
+        });
+    }
+
+    public void openLastTimePage(){
+        Intent intent = new Intent(this, All_Cases.class);
+        startActivity(intent);
     }
 
     //function that opens second page
