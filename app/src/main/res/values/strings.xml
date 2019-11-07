@@ -9,13 +9,17 @@
     <string name="password_ex">password</string>
 
     //second page strings
-    <string name="info">Enter Your Information</string>
+    <string name="name">Name </string>
+    <string name="number">Mobile Number</string>
+    <string name="info">New User Information</string>
     <string name="age">Age</string>
     <string name="agehint">21</string>
     <string name="gender">Gender</string>
     <string name="sex_act">Sexual Activity</string>
     <string name="genderhint">male/female/non binary</string>
     <string name="activityhint">ex. sexually active, pregnancy test, \nuse contraception</string>
+    <string name="namehint">ex. Mary Jane</string>
+    <string name="numberhint">ex. 3596-9854</string>
     <string name="bubble">chat icon</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_home">Home</string>
