@@ -7,6 +7,19 @@
     android:background="@color/screenback"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/chatIcon"
+        android:layout_width="96dp"
+        android:layout_height="94dp"
+        android:contentDescription="@string/bubble"
+        app:layout_constraintBottom_toTopOf="@+id/prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366"
+        app:srcCompat="@drawable/bubble" />
+
     <TextView
         android:id="@+id/welcome"
         android:layout_width="370dp"
@@ -120,18 +133,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.514" />
-
-    <ImageView
-        android:id="@+id/chatIcon"
-        android:layout_width="96dp"
-        android:layout_height="94dp"
-        android:contentDescription="@string/bubble"
-        app:layout_constraintBottom_toTopOf="@+id/prompt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366"
-        app:srcCompat="@drawable/bubble" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

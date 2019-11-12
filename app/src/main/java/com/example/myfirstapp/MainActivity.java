@@ -46,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //function that opens page for returning user
     public void openLastTimePage(){
         Intent intent = new Intent(this, All_Cases.class);
         startActivity(intent);
     }
 
-    //function that opens second page
+    //function that opens page for new user
     public void openInfoPage(){
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, Activity_Init_Info.class);
         startActivity(intent);
     }
 
