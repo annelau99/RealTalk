@@ -33,7 +33,7 @@ public class Activity_LastTime extends AppCompatActivity {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(SecondActivity.class);
+                openNextPage(MainActivity.class);
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
