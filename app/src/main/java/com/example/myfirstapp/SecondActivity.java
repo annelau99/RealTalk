@@ -64,6 +64,9 @@ public class SecondActivity extends AppCompatActivity {
                     }
                 });
 
+                //the above function doesn't work, so just added this for demo purposes
+                openNextPage();
+
             }
         });
     }

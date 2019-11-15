@@ -13,7 +13,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="27dp"
-        android:layout_marginBottom="13dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/agehint"
@@ -23,8 +23,7 @@
         app:layout_constraintBottom_toTopOf="@+id/gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newnumber"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/newnumber" />
 
     <EditText
         android:id="@+id/age_num"
@@ -32,6 +31,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="26dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/numberhint"
@@ -41,15 +41,14 @@
         app:layout_constraintBottom_toTopOf="@+id/newnumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/age" />
 
     <TextView
         android:id="@+id/enter_info"
         android:layout_width="339dp"
         android:layout_height="46dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="86dp"
         android:layout_marginBottom="2dp"
         android:fontFamily="sans-serif-medium"
@@ -69,9 +68,9 @@
         android:layout_width="156dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/name"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -85,7 +84,9 @@
         android:layout_width="206dp"
         android:layout_height="38dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="185dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/number"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -99,8 +100,9 @@
         android:layout_width="366dp"
         android:layout_height="66dp"
         android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="16dp"
         android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
@@ -110,6 +112,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sexual_activity" />
 
@@ -118,6 +121,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="235dp"
         android:text="@string/sex_act"
         android:textColor="@color/colorAccent"
@@ -133,7 +137,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="8dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/genderhint"
@@ -143,16 +147,16 @@
         app:layout_constraintBottom_toTopOf="@+id/sexual_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
 
     <TextView
         android:id="@+id/newnumber"
         android:layout_width="156dp"
         android:layout_height="35dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="232dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/age"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -167,7 +171,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="12dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/namehint"
@@ -177,14 +181,14 @@
         app:layout_constraintBottom_toTopOf="@+id/age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newname"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/newname" />
 
     <TextView
         android:id="@+id/gender"
         android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="266dp"
         android:layout_marginBottom="1dp"
         android:text="@string/gender"
@@ -201,7 +205,7 @@
         android:layout_height="34dp"
         android:layout_marginStart="280dp"
         android:layout_marginEnd="31dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#F8A489"
         android:fontFamily="sans-serif-light"
