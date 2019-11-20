@@ -26,6 +26,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         Button button6 = (Button) findViewById(R.id.submit);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
+        ImageButton home = (ImageButton) findViewById(R.id.homebutton);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +87,12 @@ public class Activity_CheckIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openNextPage(Activity_Information.class);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(MainActivity.class);
             }
         });
 

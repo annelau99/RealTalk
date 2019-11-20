@@ -60,6 +60,7 @@
 
     //what do you want to learn today strings
     <string name="checkin_heading">What do you want to learn about today? </string>
+    <string name="select_one">Select one of the topics below.</string>
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>

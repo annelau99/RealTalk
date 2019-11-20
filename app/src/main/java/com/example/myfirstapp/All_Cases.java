@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class All_Cases extends AppCompatActivity {
 
-    ImageButton left, right;
+    ImageButton left, right, home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,12 @@ public class All_Cases extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openNextPage(Activity_CheckIn.class);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(MainActivity.class);
             }
         });
     }

@@ -62,7 +62,7 @@
             android:text="@string/waiting"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
@@ -101,7 +101,7 @@
             android:text="@string/processed"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
@@ -172,4 +172,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/homebutton"
+        android:layout_width="89dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightButton"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/white_background"
+        app:srcCompat="@drawable/home_icon_orange" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
