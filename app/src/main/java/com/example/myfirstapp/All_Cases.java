@@ -12,7 +12,7 @@ import android.widget.Button;
 public class All_Cases extends AppCompatActivity {
 
     ImageButton left, right;
-    Button home;
+    Button home,pcase1,pcase2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class All_Cases extends AppCompatActivity {
         left = (ImageButton) findViewById(R.id.leftButton);
         right = (ImageButton) findViewById(R.id.rightButton);
         home = (Button) findViewById(R.id.homebutton);
+        pcase1 = findViewById(R.id.pcase1);
+        pcase2 = findViewById(R.id.pcase2);
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,15 @@ public class All_Cases extends AppCompatActivity {
                 openNextPage(MainActivity.class);
             }
         });
+        /// On Click of the Cases:
+        pcase1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(InfoPage_Activity.class);
+            }
+        });
+
+
     }
 
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){

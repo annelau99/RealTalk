@@ -16,7 +16,7 @@ public class Activity_Init_Info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_init_info);
 
-        next = (Button) findViewById(R.id.nextbutton);
+        next = (Button) findViewById(R.id.donebutton);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

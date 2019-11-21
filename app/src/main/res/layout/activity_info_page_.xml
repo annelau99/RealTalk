@@ -7,70 +7,69 @@
     android:background="@color/white"
     tools:context=".Activity_Init_Info">
 
-    <ImageView
-        android:id="@+id/chatIcon2"
-        android:layout_width="96dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="19dp"
-        android:contentDescription="@string/bubble"
-        app:layout_constraintBottom_toTopOf="@+id/intro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bubble" />
-
     <TextView
         android:id="@+id/app_name"
         android:layout_width="199dp"
         android:layout_height="50dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:text="@string/app_name"
+        android:text="@string/pregnancy"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/chatIcon2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092" />
 
-    <TextView
-        android:id="@+id/intro"
-        android:layout_width="351dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/intro"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/time_frame_title"
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="413dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+        app:layout_constraintTop_toBottomOf="@+id/app_name">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="351dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="30dp"
+                android:text="@string/pregnancyIntro"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/time_frame_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_name" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/time_frame_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="242dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/time_frame"
+        android:text="@string/symptoms"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/time_frame_descrip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intro" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
     <TextView
         android:id="@+id/time_frame_descrip"
@@ -79,7 +78,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/time_frame_descrip"
+        android:text="@string/pregnancySymp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/disclaimer_title"
@@ -96,12 +95,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="299dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/disclaimer"
+        android:text="@string/TODO"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/disclaimer_descrip"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time_frame_descrip" />
 
@@ -112,7 +112,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="125dp"
-        android:text="@string/disclaimer_descrip"
+        android:text="@string/pregnancyTODO"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +132,7 @@
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#F8A489"
         android:fontFamily="sans-serif-light"
-        android:text="@string/next"
+        android:text="@string/DONE"
         android:textAlignment="center"
         android:textColor="@android:color/secondary_text_light"
         android:textSize="18sp"
@@ -140,5 +140,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/disclaimer_descrip" />
+
+    <ImageButton
+        android:id="@+id/sound"
+        android:layout_width="79dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="36dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:src="@drawable/sound"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toEndOf="@+id/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <Button
+        android:id="@+id/stopbutton"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/sound"
+        app:layout_constraintVertical_bias="0.29"
+        tools:text="@string/stop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

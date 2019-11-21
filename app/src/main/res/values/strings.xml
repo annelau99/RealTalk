@@ -51,7 +51,8 @@
     <string name="confidential">All information given in these reports will be kept confidential.
     Click the reports to view contents. </string>
     <string name="waiting">Waiting</string>
-    <string name="processed">Processed</string>
+    <string name="processed">Processed (Click-Me)</string>
+    <string name="case1">Case 1....</string>
 
 
     //what did we talk about last time strings
@@ -113,4 +114,20 @@
     //Case Information
     <string name="caseheading">Case Summary</string>
     <string name="symptoms">Symptoms: </string>
+
+    //Case dates
+    <string name="fivedays">Case 6 ---- Submitted: Five Days Ago</string>
+    <string name="threedays">Case 5 ---- Submitted: Three Days Ago</string>
+    <string name="twohours">Case 4 ---- Submitted: Two Hours Ago</string>
+    <string name="case1preg">Case 1 ---- Info: Pregnancy </string>
+    <string name="case2child">Case 2 ---- Info: Child Health </string>
+    //Information Pages
+    <string name="TODO">What to do next? </string>
+    <string name="DONE">DONE</string>
+    <string name="stop">STOP</string>
+    //Pregnancy
+    <string name="pregnancyIntro">Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14] Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14]</string>
+    <string name="pregnancySymp">Missed period.Tender, swollen breasts.Nausea with or without vomiting. Morning sickness. Increased urination. Fatigue. </string>
+    <string name="pregnancyTODO">Make a prenatal appointment, Consult your provider about medications you are taking, If you smoke, quit, Stop drinking alcohol, Make sure your activities are pregnancy-safe</string>
+
 </resources>
