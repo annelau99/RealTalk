@@ -33,7 +33,7 @@ public class Activity_Information extends AppCompatActivity {
         Button button4 = (Button) findViewById(R.id.button4);
         Button button5 = (Button) findViewById(R.id.button5);
         Button button3 = (Button) findViewById(R.id.button3);
-        Button submit = (Button) findViewById(R.id.submit);
+        Button submit = (Button) findViewById(R.id.submit_second_activity);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
 

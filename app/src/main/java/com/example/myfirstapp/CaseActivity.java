@@ -25,7 +25,7 @@ public class CaseActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.symptom1);
         textView.setText(message);
 
-        Button submit = (Button) findViewById(R.id.submit);
+        Button submit = (Button) findViewById(R.id.submit_second_activity);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
 
