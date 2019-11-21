@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Button;
 
 public class All_Cases extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class All_Cases extends AppCompatActivity {
 
         left = (ImageButton) findViewById(R.id.leftButton);
         right = (ImageButton) findViewById(R.id.rightButton);
+        home = (Button) findViewById(R.id.homebutton);
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override
