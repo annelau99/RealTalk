@@ -56,11 +56,15 @@
 
     //what did we talk about last time strings
     <string name="lasttime_heading">What we talked about last time: </string>
-    <string name="helptoday">What do you need \nhelp with today? > </string>
+    <string name="helptoday">What do you need help with today? > </string>
 
     //what do you want to learn today strings
     <string name="checkin_heading">What do you want to learn about today? </string>
     <string name="select_one">Select one of the topics below.</string>
+    <string name="click_one">Click me to select a topic</string>
+    <string name="home">Home</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>

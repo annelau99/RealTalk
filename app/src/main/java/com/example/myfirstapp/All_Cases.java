@@ -10,7 +10,8 @@ import android.widget.ImageButton;
 
 public class All_Cases extends AppCompatActivity {
 
-    ImageButton left, right, home;
+    ImageButton left, right;
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

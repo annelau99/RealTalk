@@ -58,7 +58,6 @@
             android:layout_marginStart="21dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="292dp"
-            android:layout_marginBottom="5dp"
             android:text="@string/waiting"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -66,38 +65,18 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
-            app:layout_constraintBottom_toTopOf="@+id/waiting_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/confidential" />
-
-        <EditText
-            android:id="@+id/waiting_box"
-            android:layout_width="366dp"
-            android:layout_height="124dp"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            android:autofillHints=""
-            android:background="@drawable/morerounded_corner"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:labelFor="@id/waiting"
-            app:layout_constraintBottom_toTopOf="@+id/processed"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/waiting"
-            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/processed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
+            android:layout_marginTop="125dp"
             android:layout_marginEnd="258dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginBottom="170dp"
             android:text="@string/processed"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -105,30 +84,11 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
-            app:layout_constraintBottom_toTopOf="@+id/processed_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/waiting_box" />
-
-        <EditText
-            android:id="@+id/processed_box"
-            android:layout_width="366dp"
-            android:layout_height="132dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="49dp"
-            android:autofillHints=""
-            android:background="@drawable/morerounded_corner"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:labelFor="@id/processed"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/processed"
-            tools:targetApi="o" />
+            app:layout_constraintTop_toBottomOf="@+id/waiting" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
@@ -173,17 +133,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ImageButton
+    <Button
         android:id="@+id/homebutton"
-        android:layout_width="89dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="73dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/buttonColor"
+        android:text="@string/home"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/rightButton"
         app:layout_constraintStart_toEndOf="@+id/leftButton"
-        app:layout_constraintTop_toBottomOf="@+id/white_background"
-        app:srcCompat="@drawable/home_icon_orange" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

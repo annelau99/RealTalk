@@ -23,10 +23,10 @@ public class Activity_CheckIn extends AppCompatActivity {
         //Button button3 = (Button) findViewById(R.id.button3);
         Button button4 = (Button) findViewById(R.id.button4);
         Button button5 = (Button) findViewById(R.id.button5);
-        Button button6 = (Button) findViewById(R.id.submit);
+        Button button6 = (Button) findViewById(R.id.submit_second_activity);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
-        ImageButton home = (ImageButton) findViewById(R.id.homebutton);
+        Button home = (Button) findViewById(R.id.homebutton);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +72,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Button buttonVal = (Button) findViewById(R.id.submit);
+                Button buttonVal = (Button) findViewById(R.id.submit_second_activity);
                 String buttonText = buttonVal.getText().toString();
                 sendInformation(Activity_Information.class, buttonText);
             }
