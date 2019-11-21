@@ -67,6 +67,9 @@
     <string name="ask_me">Ask me something else:</string>
     <string name="type_here">Type Here, then press Next</string>
 
+    //bundling/selection page
+    <string name="select">Click all the terms that apply to you, then press Submit</string>
+
     //symptoms
     <string name="pregnancy">Pregnancy</string>
     <string name="childHealth">Child Health</string>
