@@ -82,6 +82,13 @@
         <item>Clinics Near Me</item>
     </string-array>
 
+    <string-array name="childhealth_array">
+        <item>Hearing, Speech, and Language</item>
+        <item>Nutrition and Eating</item>
+        <item>Newborn/Infant Care</item>
+        <item>Physical Development</item>
+        <item>Clinics Near Me</item>
+    </string-array>
 
 
     //symptoms

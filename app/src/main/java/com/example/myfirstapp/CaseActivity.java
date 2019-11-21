@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class CaseActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +24,25 @@ public class CaseActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(Activity_Information.EXTRA_MESSAGE);
 
-        // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.symptom1);
-        textView.setText(message);
+        Bundle b = getIntent().getExtras();
+        String[] resultArr = b.getStringArray("selectedItems");
+        ListView lv = (ListView) findViewById(R.id.outputList);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, resultArr);
+        lv.setAdapter(adapter);
 
         Button submit = (Button) findViewById(R.id.submit_second_activity);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
+        Button home = (Button) findViewById(R.id.homebutton3);
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toastMe(v);
+                openNextPage(All_Cases.class);
             }
         });
 
@@ -46,6 +56,12 @@ public class CaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openNextPage(CaseActivity.class);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(MainActivity.class);
             }
         });
 

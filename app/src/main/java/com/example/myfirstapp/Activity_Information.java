@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,6 +27,7 @@ public class Activity_Information extends AppCompatActivity {
     ListView list;
     ArrayAdapter<String> adapter;
     Button submit;
+    String details[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class Activity_Information extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(Activity_CheckIn.EXTRA_MESSAGE);
 
+       // Log.d("myMessage", message);
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.heading);
@@ -45,7 +48,14 @@ public class Activity_Information extends AppCompatActivity {
 
         //list
         list = (ListView) findViewById(R.id.list);
-        String details[] = getResources().getStringArray(R.array.pregnancy_array);
+
+        assert message != null;
+        if (message.compareTo("Pregnancy") == 0) {
+            details = getResources().getStringArray(R.array.pregnancy_array);
+        } else if (message.compareTo("Child Health") == 0)
+            details = getResources().getStringArray(R.array.childhealth_array);
+
+        //details = getResources().getStringArray(R.array.pregnancy_array);
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, details);
         list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
