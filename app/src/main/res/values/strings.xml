@@ -25,7 +25,7 @@
     <string name="disclaimer_descrip">All the information sent to you is purely for
         educational purposes. Real Talk is not a proper medical diagnosis. Please see your
         local doctor if you have an emergency medical issue.</string>
-    <string name="next">next</string>
+    <string name="next">NEXT</string>
 
 
     //second page - new user registration strings
@@ -63,7 +63,9 @@
     <string name="select_one">Select one of the topics below.</string>
     <string name="click_one">Click me to select a topic</string>
     <string name="home">Home</string>
-    <string name="back">Back</string>
+    <string name="back">BACK</string>
+    <string name="ask_me">Ask me something else:</string>
+    <string name="type_here">Type Here, then press Next</string>
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>

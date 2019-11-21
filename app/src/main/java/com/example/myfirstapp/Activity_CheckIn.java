@@ -80,7 +80,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(Activity_LastTime.class);
+                openNextPage(All_Cases.class);
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
