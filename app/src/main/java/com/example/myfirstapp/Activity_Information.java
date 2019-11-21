@@ -10,15 +10,28 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.os.Bundle;
+import android.util.SparseBooleanArray;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 
 public class Activity_Information extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    ListView list;
+    ArrayAdapter<String> adapter;
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__information);
+
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(Activity_CheckIn.EXTRA_MESSAGE);
@@ -28,73 +41,20 @@ public class Activity_Information extends AppCompatActivity {
         TextView textView = findViewById(R.id.heading);
         textView.setText(message);
 
-        Button button1 = (Button) findViewById(R.id.button1);
-        Button button2 = (Button) findViewById(R.id.button2);
-        Button button4 = (Button) findViewById(R.id.button4);
-        Button button5 = (Button) findViewById(R.id.button5);
-        Button button3 = (Button) findViewById(R.id.button3);
-        Button submit = (Button) findViewById(R.id.submit_second_activity);
+        submit = (Button) findViewById(R.id.submit_bundle);
+
+        //list
+        list = (ListView) findViewById(R.id.list);
+        String details[] = getResources().getStringArray(R.array.pregnancy_array);
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, details);
+        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        list.setAdapter(adapter);
+
+
+        //left and right buttons
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
-
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.button1);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.button2);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.button3);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.button3);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.button5);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-        /*button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-                Button buttonVal = (Button) findViewById(R.id.submit);
-                String buttonText = buttonVal.getText().toString();
-                sendInformation(CaseActivity.class, buttonText);
-            }
-        });
-         */
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,15 +68,38 @@ public class Activity_Information extends AppCompatActivity {
             }
         });
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
-                openNextPage(CaseActivity.class);
+            public void onClick(View v){
+                SparseBooleanArray checked = list.getCheckedItemPositions();
+                ArrayList<String> selectedItems = new ArrayList<String>();
+                for (int i = 0; i < checked.size(); i++) {
+                    int position = checked.keyAt(i);
+                    if (checked.valueAt(i))
+                        selectedItems.add(adapter.getItem(position));
+                }
+
+                String[] outputStrArr = new String[selectedItems.size()];
+                for (int i = 0; i < selectedItems.size(); i++) {
+                    outputStrArr[i] = selectedItems.get(i);
+                }
+
+                // Create a bundle object
+                Bundle b = new Bundle();
+                b.putStringArray("selectedItems", outputStrArr);
+
+
+                openAfterSubmit(CaseActivity.class, b);
             }
         });
 
 
+    }
 
+    public void openAfterSubmit(final Class<? extends Activity> ActivityToOpen, Bundle b){
+        Intent intent = new Intent(this, CaseActivity.class);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 
     public void sendInformation(final Class<? extends Activity> ActivityToOpen, String buttonText) {
