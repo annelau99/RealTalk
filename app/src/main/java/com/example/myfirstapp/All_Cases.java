@@ -2,33 +2,23 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.app.Activity;
 
-import android.os.Bundle;
+public class All_Cases extends AppCompatActivity {
 
-public class Activity_LastTime extends AppCompatActivity {
-
-    private Button helptoday;
-    private ImageButton left, right;
-
+    ImageButton left, right, home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lasttime);
+        setContentView(R.layout.activity_all_cases);
 
         left = (ImageButton) findViewById(R.id.leftButton);
         right = (ImageButton) findViewById(R.id.rightButton);
-        helptoday = (Button) findViewById(R.id.helptoday);
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +32,12 @@ public class Activity_LastTime extends AppCompatActivity {
                 openNextPage(Activity_CheckIn.class);
             }
         });
-
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(MainActivity.class);
+            }
+        });
     }
 
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){
@@ -50,4 +45,3 @@ public class Activity_LastTime extends AppCompatActivity {
         startActivity(intent);
     }
 }
-

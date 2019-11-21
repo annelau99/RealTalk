@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#AD21B7</color>
+    <color name="colorPrimary">#2568c4</color>
     <color name="colorPrimaryDark">#5D576B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="screenback">#E8D7F1</color>
+    <color name="screenback">#f0f0ff</color>
     <color name="white">#ffffff</color>
     <color name="buttonColor">#F8A489</color>
 </resources>

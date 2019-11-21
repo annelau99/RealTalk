@@ -1,4 +1,8 @@
 <resources>
+    //button content descriptions
+    <string name="leftbutton">leftbutton</string>
+    <string name="rightbutton">rightbutton</string>
+
     //home page strings
     <string name="app_name">Real Talk</string>
     <string name="welcome">Welcome to Real Talk!</string>
@@ -10,10 +14,24 @@
     <string name="new_user">New User</string>
     <string name="ret_user">Returning User</string>
 
-    //second page strings
+    //real talk introduction information page
+    <string name="intro">Welcome to Real Talk, the purpose of this application is for you
+    to send a list of descriptors of how you are feeling or questions you might have regarding
+         your health to a medical professional.</string>
+    <string name="time_frame">Expected Time Frame:</string>
+    <string name="time_frame_descrip">In 1-2 weeks, you will receive an informational package
+        personalized based on your profile that will help you learn.</string>
+    <string name="disclaimer">Disclaimer:</string>
+    <string name="disclaimer_descrip">All the information sent to you is purely for
+        educational purposes. Real Talk is not a proper medical diagnosis. Please see your
+        local doctor if you have an emergency medical issue.</string>
+    <string name="next">next</string>
+
+
+    //second page - new user registration strings
     <string name="name">Name </string>
     <string name="number">Mobile Number</string>
-    <string name="info">New User Information</string>
+    <string name="info">New User Registration</string>
     <string name="age">Age</string>
     <string name="agehint">21</string>
     <string name="gender">Gender</string>
@@ -28,6 +46,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    //cases waiting + processing page strings
+    <string name="client_reports">Client Reports</string>
+    <string name="confidential">All information given in these reports will be kept confidential.
+    Click the reports to view contents. </string>
+    <string name="waiting">Waiting</string>
+    <string name="processed">Processed</string>
+
 
     //what did we talk about last time strings
     <string name="lasttime_heading">What we talked about last time: </string>
@@ -35,6 +60,7 @@
 
     //what do you want to learn today strings
     <string name="checkin_heading">What do you want to learn about today? </string>
+    <string name="select_one">Select one of the topics below.</string>
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>

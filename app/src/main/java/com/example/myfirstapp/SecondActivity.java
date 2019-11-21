@@ -64,12 +64,15 @@ public class SecondActivity extends AppCompatActivity {
                     }
                 });
 
+                //the above function doesn't work, so just added this for demo purposes
+                openNextPage();
+
             }
         });
     }
 
     public void openNextPage() {
-        Intent intent = new Intent(this, Activity_LastTime.class);
+        Intent intent = new Intent(this, All_Cases.class);
         startActivity(intent);
     }
 
