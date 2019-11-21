@@ -67,6 +67,30 @@
     <string name="ask_me">Ask me something else:</string>
     <string name="type_here">Type Here, then press Next</string>
 
+    //topic page
+    <string name="pick_one">Select one of the points of interest below</string>
+
+    //bundling/selection page
+    <string name="select">Click all the things you want to know, then press Submit</string>
+    <string-array name="pregnancy_array">
+        <item>Pregnancy symptoms</item>
+        <item>Preventing Pregnancy</item>
+        <item>Nutrition while Pregnant</item>
+        <item>Trying to Conceive</item>
+        <item>Sleep Regression</item>
+        <item>Natural Birth</item>
+        <item>Clinics Near Me</item>
+    </string-array>
+
+    <string-array name="childhealth_array">
+        <item>Hearing, Speech, and Language</item>
+        <item>Nutrition and Eating</item>
+        <item>Newborn/Infant Care</item>
+        <item>Physical Development</item>
+        <item>Clinics Near Me</item>
+    </string-array>
+
+
     //symptoms
     <string name="pregnancy">Pregnancy</string>
     <string name="childHealth">Child Health</string>
