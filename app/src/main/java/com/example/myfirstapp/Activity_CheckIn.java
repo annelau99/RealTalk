@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class Activity_CheckIn extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    public static final String EXTRA_MESSAGE = "topic";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +87,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(Activity_Information.class);
+                toastMe(v);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +108,14 @@ public class Activity_CheckIn extends AppCompatActivity {
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){
         Intent intent = new Intent(this, ActivityToOpen);
         startActivity(intent);
+    }
+
+    //function that displays "submitted" message
+    public void toastMe(View view){
+        // Toast myToast = Toast.makeText(this, message, duration);
+        Toast myToast = Toast.makeText(this, "Please click one of the topics and press submit!",
+                Toast.LENGTH_SHORT);
+        myToast.show();
     }
 
 }

@@ -5,20 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.List;
 
-import android.os.Bundle;
 import android.util.SparseBooleanArray;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
 public class Activity_Information extends AppCompatActivity {
@@ -36,7 +31,7 @@ public class Activity_Information extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(Activity_CheckIn.EXTRA_MESSAGE);
+        final String message = intent.getStringExtra(Activity_CheckIn.EXTRA_MESSAGE);
 
        // Log.d("myMessage", message);
 
@@ -52,8 +47,12 @@ public class Activity_Information extends AppCompatActivity {
         assert message != null;
         if (message.compareTo("Pregnancy") == 0) {
             details = getResources().getStringArray(R.array.pregnancy_array);
-        } else if (message.compareTo("Child Health") == 0)
+        } else if (message.compareTo("Child Health") == 0) {
             details = getResources().getStringArray(R.array.childhealth_array);
+        } else if (message.compareTo("Menstruation") == 0) {
+            details = getResources().getStringArray(R.array.menstruation_array);
+        }
+
 
         //details = getResources().getStringArray(R.array.pregnancy_array);
 
@@ -97,7 +96,7 @@ public class Activity_Information extends AppCompatActivity {
                 // Create a bundle object
                 Bundle b = new Bundle();
                 b.putStringArray("selectedItems", outputStrArr);
-
+                b.putString("topic", message);
 
                 openAfterSubmit(CaseActivity.class, b);
             }

@@ -21,12 +21,16 @@ public class CaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case);
 
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(Activity_Information.EXTRA_MESSAGE);
+        //Intent intent = getIntent();
+       // String message = intent.getStringExtra(Activity_Information.EXTRA_MESSAGE);
 
         Bundle b = getIntent().getExtras();
         String[] resultArr = b.getStringArray("selectedItems");
         ListView lv = (ListView) findViewById(R.id.outputList);
+
+        String message = b.getString("topic");
+        TextView textView = findViewById(R.id.heading2);
+        textView.setText(message);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, resultArr);
