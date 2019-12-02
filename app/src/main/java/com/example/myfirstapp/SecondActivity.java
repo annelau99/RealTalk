@@ -23,11 +23,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
 
-        nameInput = (EditText) findViewById(R.id.editname);
-        numInput = (EditText) findViewById(R.id.age_num);
-        ageInput = (EditText) findViewById(R.id.editnumber);
-        genderInput = (EditText) findViewById(R.id.gender_user);
-        sexInput = (EditText) findViewById(R.id.sexact_user);
+        nameInput = findViewById(R.id.editname);
+        numInput = findViewById(R.id.age_num);
+        ageInput = findViewById(R.id.editnumber);
+        genderInput = findViewById(R.id.gender_user);
+        sexInput = findViewById(R.id.sexact_user);
 
 
         submit = (Button) findViewById(R.id.submit_second_activity);
@@ -52,11 +52,11 @@ public class SecondActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
             return false;
-        } else if (TextUtils.isEmpty(age)){
-            Toast.makeText(this, "Please enter your age", Toast.LENGTH_SHORT).show();
-            return false;
         } else if (TextUtils.isEmpty(number)){
             Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (TextUtils.isEmpty(age)){
+            Toast.makeText(this, "Please enter your age", Toast.LENGTH_SHORT).show();
             return false;
         } else if (TextUtils.isEmpty(gender)){
             Toast.makeText(this, "Please enter your gender", Toast.LENGTH_SHORT).show();
