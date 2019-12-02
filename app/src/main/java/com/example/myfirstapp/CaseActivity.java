@@ -21,10 +21,7 @@ public class CaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case);
 
-        //Intent intent = getIntent();
-       // String message = intent.getStringExtra(Activity_Information.EXTRA_MESSAGE);
-
-        Bundle b = getIntent().getExtras();
+        final Bundle b = getIntent().getExtras();
         String[] resultArr = b.getStringArray("selectedItems");
         ListView lv = (ListView) findViewById(R.id.outputList);
 
@@ -45,27 +42,26 @@ public class CaseActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastMe(v);
-                openNextPage(All_Cases.class);
+                openNextPage(All_Cases.class, b);
             }
         });
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(Activity_Information.class);
+                openNextPage(Activity_Information.class, b);
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(CaseActivity.class);
+                toastMe(v);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(MainActivity.class);
+                openNextPage(MainActivity.class, b);
             }
         });
 
@@ -73,13 +69,14 @@ public class CaseActivity extends AppCompatActivity {
 
     public void toastMe(View view){
         // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = Toast.makeText(this, "You submitted!",
+        Toast myToast = Toast.makeText(this, "Press submit button!",
                 Toast.LENGTH_SHORT);
         myToast.show();
     }
 
-    public void openNextPage(final Class<? extends Activity> ActivityToOpen){
+    public void openNextPage(final Class<? extends Activity> ActivityToOpen, Bundle b){
         Intent intent = new Intent(this, ActivityToOpen);
+        intent.putExtras(b);
         startActivity(intent);
     }
 

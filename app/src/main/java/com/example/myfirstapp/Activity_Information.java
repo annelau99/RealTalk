@@ -97,6 +97,7 @@ public class Activity_Information extends AppCompatActivity {
                 Bundle b = new Bundle();
                 b.putStringArray("selectedItems", outputStrArr);
                 b.putString("topic", message);
+                b.putBoolean("case?", true);
 
                 openAfterSubmit(CaseActivity.class, b);
             }
