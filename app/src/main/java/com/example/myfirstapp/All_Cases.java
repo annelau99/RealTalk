@@ -21,10 +21,14 @@ public class All_Cases extends AppCompatActivity {
         setContentView(R.layout.activity_all_cases);
 
         final Bundle b = getIntent().getExtras();
-        boolean isCase = b.getBoolean("case?");
-        if (isCase){
-            // add the new case to the list
+        if (b != null) {
+            if (b.containsKey("case?")) {
+                boolean isCase = b.getBoolean("case?");
+                if (isCase){
+                    // add the new case to the list...but how
 
+                }
+            }
         }
 
         left = (ImageButton) findViewById(R.id.leftButton);
