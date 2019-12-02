@@ -91,6 +91,16 @@
         <item>Clinics Near Me</item>
     </string-array>
 
+    <string-array name="menstruation_array">
+        <item>Menstrual Products (i.e. Pads, Tampons, Cups)</item>
+        <item>Buying Products</item>
+        <item>Premenstrual Syndrome (PMS)</item>
+        <item>Menstrual Cramps</item>
+        <item>Irregular Bleeding</item>
+        <item>Heavy Bleeding</item>
+        <item>Clinics Near Me</item>
+    </string-array>
+
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>
@@ -100,9 +110,6 @@
     <string name="sexhealth">Sexual Health</string>
     <string name="menstruation">Menstruation</string>
     <string name="products">Menstrual Products</string>
-    <string name="buyingprod">Buying Products</string>
-    <string name="tampons">Menstrual Tampons</string>
-    <string name="pads">Menstrual Pads</string>
     <string name="birthcontrol">Birth Control</string>
     <string name="HIVAIDS">HIV and AIDS</string>
     <string name="headache">HeadAche</string>
@@ -113,7 +120,9 @@
 
     //Case Information
     <string name="caseheading">Case Summary</string>
+    <string name="case_des">These are the topics you selected: </string>
     <string name="symptoms">Symptoms: </string>
+
 
     //Case dates
     <string name="fivedays">Case 6 ---- Submitted: Five Days Ago</string>

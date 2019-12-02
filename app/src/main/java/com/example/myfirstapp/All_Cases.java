@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
+import java.lang.Boolean;
 
 public class All_Cases extends AppCompatActivity {
 
@@ -18,6 +19,17 @@ public class All_Cases extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_cases);
+
+        final Bundle b = getIntent().getExtras();
+        if (b != null) {
+            if (b.containsKey("case?")) {
+                boolean isCase = b.getBoolean("case?");
+                if (isCase){
+                    // add the new case to the list...but how
+
+                }
+            }
+        }
 
         left = (ImageButton) findViewById(R.id.leftButton);
         right = (ImageButton) findViewById(R.id.rightButton);
@@ -30,6 +42,7 @@ public class All_Cases extends AppCompatActivity {
             public void onClick(View v) {
                 openNextPage(MainActivity.class);
             }
+
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override

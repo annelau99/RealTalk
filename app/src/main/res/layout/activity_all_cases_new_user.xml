@@ -121,14 +121,12 @@
                 <Button
                     android:id="@+id/case2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/threedays" />
+                    android:layout_height="wrap_content" />
 
                 <Button
                     android:id="@+id/case3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fivedays" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -168,21 +166,7 @@
                 android:orientation="vertical"
                 android:padding="10dp"
                 tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="5dp">
-
-                <Button
-                    android:id="@+id/pcase1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pregnancy" />
-
-                <Button
-                    android:id="@+id/pcase2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/childHealth"/>
-
-            </LinearLayout>
+                tools:layout_editor_absoluteY="5dp"/>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -199,7 +183,6 @@
         android:padding="5dp"
         android:scaleType="fitCenter"
         android:src="@drawable/right_arrow"
-        android:tooltipText="Next Page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/next_text2"
@@ -220,7 +203,6 @@
         android:padding="5dp"
         android:scaleType="fitCenter"
         android:src="@drawable/left_arrow"
-        android:tooltipText="Go Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/back_text3"
         app:layout_constraintStart_toStartOf="parent"

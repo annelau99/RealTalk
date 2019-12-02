@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
+import android.text.TextUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,25 +26,54 @@ public class MainActivity extends AppCompatActivity {
         phoneInput = (EditText) findViewById(R.id.phoneNum);
         passInput = (EditText) findViewById(R.id.password);
 
+        //new user button
         submit = (Button) findViewById(R.id.submitbutton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 PhoneNumber = phoneInput.getText().toString();
                 password = passInput.getText().toString();
 
-                toastMe(v);
-                openInfoPage();
+                if (checkPhone(PhoneNumber) && checkName(password)) {
+                    openInfoPage();
+                }
             }
         });
 
+        //returning user button
         register = (Button) findViewById(R.id.submitbutton2);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLastTimePage();
+
+                PhoneNumber = phoneInput.getText().toString();
+                password = passInput.getText().toString();
+
+                if (checkPhone(PhoneNumber) && checkName(password)) {
+                    openLastTimePage();
+                }
             }
         });
+    }
+
+    //functions that check for input user info
+    public boolean checkPhone(String phone){
+        if(TextUtils.isEmpty(phone))
+        {
+            Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+    public boolean checkName(String name){
+        if(TextUtils.isEmpty(name))
+        {
+            Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     //function that opens page for returning user
@@ -58,67 +88,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //function that displays "submitted" message
-    public void toastMe(View view){
-        // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = Toast.makeText(this, "You submitted!",
-                Toast.LENGTH_SHORT);
-        myToast.show();
-    }
 
-
-     /*public void login(View view){
-        phoneInput = (EditText) findViewById(R.id.phoneNum);
-        passInput = (EditText) findViewById(R.id.password);
-        submit = (Button) findViewById(R.id.submitbutton);
-        submit.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void OnClick(view) {
-                PhoneNumber = phoneInput.getText().toString();
-                password = passInput.getText().toString();
-
-                toastMe(view);
-            }
-        });
-    }*/
-
-    /*public void countMe (View view) {
-        // Get the text view.
-        TextView showCountTextView = (TextView)
-                findViewById(R.id.welcome);
-
-        // Get the value of the text view.
-        String countString = showCountTextView.getText().toString();
-
-        // Convert value to a number and increment it.
-        Integer count = Integer.parseInt(countString);
-        count++;
-
-        // Display the new value in the text view.
-        showCountTextView.setText(count.toString());
-    }
-
-    private static final String TOTAL_COUNT = "total_count";
-
-    public void randomMe (View view) {
-
-        // Create an Intent to start the second activity
-        Intent randomIntent = new Intent(this, SecondActivity.class);
-
-        // Get the text view that shows the count.
-        TextView showCountTextView = (TextView) findViewById(R.id.welcome);
-
-        // Get the value of the text view.
-        String countString = showCountTextView.getText().toString();
-
-        // Convert the count to an int
-        int count = Integer.parseInt(countString);
-
-        // Add the count to the extras for the Intent.
-        randomIntent.putExtra(TOTAL_COUNT, count);
-
-        // Start the new activity.
-        startActivity(randomIntent);
-    }*/
 
 }

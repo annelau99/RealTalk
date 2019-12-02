@@ -8,6 +8,91 @@
     tools:context=".Activity_LastTime">
 
     <TextView
+        android:id="@+id/heading"
+        android:layout_width="346dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="8dp"
+        android:accessibilityLiveRegion="polite"
+        android:text="@string/pregnancy"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="24dp"
+        android:lineSpacingExtra="20sp"
+        android:text="@string/select"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="444dp"
+        android:layout_height="396dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/submit_bundle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list"
+            app:layout_constraintVertical_bias="0.924" />
+
+        <ListView
+            android:id="@+id/list"
+            style="@style/Widget.AppCompat.Light.ListView.DropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:theme="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ListView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
         android:id="@+id/back_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,67 +119,25 @@
         app:layout_constraintStart_toEndOf="@+id/homebutton"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="346dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="16dp"
-        android:accessibilityLiveRegion="polite"
-        android:text="@string/pregnancy"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/description"
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="61dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@color/screenback"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="444dp"
-        android:layout_height="396dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="22dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/homebutton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description">
-
-        <Button
-            android:id="@+id/submit_bundle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/buttonColor"
-            android:text="@string/submit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.873"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/list"
-            app:layout_constraintVertical_bias="0.924" />
-
-        <ListView
-            android:id="@+id/list"
-            style="@style/Widget.AppCompat.Light.ListView.DropDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="100dp"
-            android:background="@drawable/rounded_corner"
-            android:theme="@style/Base.TextAppearance.AppCompat.Medium"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </ListView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <ImageButton
         android:id="@+id/leftButton"
@@ -118,26 +161,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-    <ImageButton
-        android:id="@+id/rightButton"
-        android:layout_width="61dp"
-        android:layout_height="54dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="32dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@color/screenback"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/right_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
     <Button
         android:id="@+id/homebutton2"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -146,7 +169,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/buttonColor"
         android:text="@string/home"
         android:textColor="@color/colorPrimaryDark"
@@ -155,22 +178,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/back_text2"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="52dp"
-        android:lineSpacingExtra="20sp"
-        android:text="@string/select"
-        android:textColor="@color/colorAccent"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
