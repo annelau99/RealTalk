@@ -42,6 +42,7 @@ public class All_Cases extends AppCompatActivity {
             public void onClick(View v) {
                 openNextPage(MainActivity.class);
             }
+
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override

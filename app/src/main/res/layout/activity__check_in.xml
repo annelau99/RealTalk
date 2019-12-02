@@ -46,6 +46,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:tooltipText="The state of carrying a developing child within the female body."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.092"
