@@ -54,6 +54,9 @@ public class Activity_Information extends AppCompatActivity {
             details = getResources().getStringArray(R.array.pregnancy_array);
         } else if (message.compareTo("Child Health") == 0)
             details = getResources().getStringArray(R.array.childhealth_array);
+        else {
+            details = getResources().getStringArray(R.array.pregnancy_array);
+        }
 
         //details = getResources().getStringArray(R.array.pregnancy_array);
 

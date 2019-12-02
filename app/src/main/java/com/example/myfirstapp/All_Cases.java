@@ -23,7 +23,6 @@ public class All_Cases extends AppCompatActivity {
         right = (ImageButton) findViewById(R.id.rightButton);
         home = (Button) findViewById(R.id.homebutton);
         pcase1 = findViewById(R.id.pcase1);
-        pcase2 = findViewById(R.id.pcase2);
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override

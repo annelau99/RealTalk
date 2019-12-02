@@ -35,7 +35,7 @@
     <string name="age">Age</string>
     <string name="agehint">21</string>
     <string name="gender">Gender</string>
-    <string name="sex_act">Sexual Activity</string>
+    <string name="sex_act">Anything you want us to know?</string>
     <string name="genderhint">male/female/non binary</string>
     <string name="activityhint">ex. sexually active, pregnancy test, \nuse contraception</string>
     <string name="namehint">ex. Mary Jane</string>
@@ -124,6 +124,7 @@
     //Information Pages
     <string name="TODO">What to do next? </string>
     <string name="DONE">DONE</string>
+    <string name="start">PLAY</string>
     <string name="stop">STOP</string>
     //Pregnancy
     <string name="pregnancyIntro">Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14] Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14]</string>
