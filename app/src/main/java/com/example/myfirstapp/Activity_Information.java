@@ -53,7 +53,6 @@ public class Activity_Information extends AppCompatActivity {
             details = getResources().getStringArray(R.array.menstruation_array);
         }
 
-
         //details = getResources().getStringArray(R.array.pregnancy_array);
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, details);

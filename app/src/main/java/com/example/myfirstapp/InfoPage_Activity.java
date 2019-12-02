@@ -14,8 +14,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class InfoPage_Activity extends AppCompatActivity {
-    Button done, stop;
-    ImageButton sound;
+    Button done, stop, sound;
     private MediaPlayer myMediaPlayer;
 
     @Override
@@ -23,7 +22,7 @@ public class InfoPage_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_page_);
         done = findViewById(R.id.donebutton);
-        sound = findViewById(R.id.sound);
+        sound = findViewById(R.id.start);
         stop = findViewById(R.id.stopbutton);
         myMediaPlayer = MediaPlayer.create(this, R.raw.lethergo);
 
