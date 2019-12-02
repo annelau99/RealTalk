@@ -24,8 +24,8 @@ public class SecondActivity extends AppCompatActivity {
 
 
         nameInput = (EditText) findViewById(R.id.editname);
-        numInput = (EditText) findViewById(R.id.editnumber);
-        ageInput = (EditText) findViewById(R.id.age_num);
+        numInput = (EditText) findViewById(R.id.age_num);
+        ageInput = (EditText) findViewById(R.id.editnumber);
         genderInput = (EditText) findViewById(R.id.gender_user);
         sexInput = (EditText) findViewById(R.id.sexact_user);
 
