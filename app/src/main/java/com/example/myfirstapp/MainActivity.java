@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean checkName(String name){
         if(TextUtils.isEmpty(name))
         {
-            Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
