@@ -13,6 +13,8 @@ public class All_Cases extends AppCompatActivity {
 
     Button logout, newcase;
     Button home,pcase1,pcase2,case1, case2, case3;
+
+
     public static final String EXTRA_MESSAGE = "casenumber";
 
 
@@ -31,15 +33,17 @@ public class All_Cases extends AppCompatActivity {
         case3 = findViewById(R.id.case3);
 
         final Bundle b = getIntent().getExtras();
-        if (b != null) {
-            if (b.containsKey("case?")) {
-                boolean isCase = b.getBoolean("case?");
-                if (isCase){
-                    // add the new case to the list...but how
+//        if (b != null) {
+//            if (b.containsKey("case?")) {
+//                boolean isCase = b.getBoolean("case?");
+//                if (isCase){
+//                    // add the new case to the list...but how
+//
+//                }
+//            }
+//        }
 
-                }
-            }
-        }
+
 
         /// On Click of the Cases:
         pcase1.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +65,7 @@ public class All_Cases extends AppCompatActivity {
             public void onClick(View v) {
                 Button buttonVal = (Button) findViewById(R.id.pcase1);
                 String buttonText = buttonVal.getText().toString();
-                editcases(EditCases.class, buttonText);
+                editcases(EditCases.class, buttonText, b);
             }
         });
         case2.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +73,7 @@ public class All_Cases extends AppCompatActivity {
             public void onClick(View v) {
                 Button buttonVal = (Button) findViewById(R.id.case2);
                 String buttonText = buttonVal.getText().toString();
-                editcases(EditCases.class, buttonText);
+                editcases(EditCases.class, buttonText, b);
             }
         });
         case3.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +81,7 @@ public class All_Cases extends AppCompatActivity {
             public void onClick(View v) {
                 Button buttonVal = (Button) findViewById(R.id.case3);
                 String buttonText = buttonVal.getText().toString();
-                editcases(EditCases.class, buttonText);
+                editcases(EditCases.class, buttonText, b);
             }
         });
 
@@ -112,8 +116,9 @@ public class All_Cases extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void editcases(final Class<? extends Activity> ActivityToOpen, String s) {
+    public void editcases(final Class<? extends Activity> ActivityToOpen, String s, Bundle b) {
         Intent intent = new Intent(this, ActivityToOpen);
+       // b.putString(EXTRA_MESSAGE, s);
         intent.putExtra(EXTRA_MESSAGE, s);
         startActivity(intent);
     }

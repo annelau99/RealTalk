@@ -35,7 +35,7 @@
     <string name="age">Age</string>
     <string name="agehint">21</string>
     <string name="gender">Gender</string>
-    <string name="sex_act">Anything you want us to know?</string>
+  <string name="sex_act">Anything else you would like me to know?</string>
     <string name="genderhint">male/female/non binary</string>
     <string name="activityhint">ex. sexually active, pregnancy test, \nuse contraception</string>
     <string name="namehint">ex. Mary Jane</string>
@@ -61,7 +61,8 @@
     //what do you want to learn today strings
     <string name="checkin_heading">What do you want to learn about today? </string>
     <string name="select_one">Select one of the topics below.</string>
-    <string name="click_one">Click me to select a topic</string>
+    <string name="click_one">Click to select a topic</string>
+    <string name="click_hold">Press and hold to see what each topic means</string>
     <string name="home">Home</string>
     <string name="back">BACK</string>
     <string name="ask_me">Ask me something else:</string>
@@ -87,6 +88,7 @@
         <item>Nutrition and Eating</item>
         <item>Newborn/Infant Care</item>
         <item>Physical Development</item>
+        <item>Mental Health</item>
         <item>Clinics Near Me</item>
     </string-array>
 
