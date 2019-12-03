@@ -25,7 +25,7 @@ public class EditCases extends AppCompatActivity {
 
         heading = findViewById(R.id.heading);
         subheading = findViewById(R.id.heading2);
-        delete = findViewById(R.id.delete_case);
+        delete = findViewById(R.id.submitbutton);
         update = findViewById(R.id.update_case);
 
         heading.setText(message);

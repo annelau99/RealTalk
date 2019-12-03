@@ -106,7 +106,7 @@
             app:layout_constraintVertical_bias="0.696" />
 
         <Button
-            android:id="@+id/delete_case"
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/morerounded_corner"

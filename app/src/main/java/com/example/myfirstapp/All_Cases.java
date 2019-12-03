@@ -8,13 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
-import android.widget.Spinner;
-
-import java.lang.Boolean;
 
 public class All_Cases extends AppCompatActivity {
 
-    ImageButton left, right;
+    Button logout, newcase;
     Button home,pcase1,pcase2,case1, case2, case3;
     public static final String EXTRA_MESSAGE = "casenumber";
 
@@ -23,12 +20,13 @@ public class All_Cases extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_cases);
-        left = (ImageButton) findViewById(R.id.leftButton);
-        right = (ImageButton) findViewById(R.id.rightButton);
         home = (Button) findViewById(R.id.homebutton);
+        logout = findViewById(R.id.logout);
+        newcase = findViewById(R.id.newcase);
 
         pcase1 = findViewById(R.id.pcase1);
-        case1 = findViewById(R.id.case1);
+        pcase2 = findViewById(R.id.pcase2);
+        case1 = findViewById(R.id.pcase1);
         case2 = findViewById(R.id.case2);
         case3 = findViewById(R.id.case3);
 
@@ -51,10 +49,17 @@ public class All_Cases extends AppCompatActivity {
             }
         });
 
+        pcase2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(InfoPage_Activity.class);
+            }
+        });
+
         case1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Button buttonVal = (Button) findViewById(R.id.case1);
+                Button buttonVal = (Button) findViewById(R.id.pcase1);
                 String buttonText = buttonVal.getText().toString();
                 editcases(EditCases.class, buttonText);
             }
@@ -78,14 +83,14 @@ public class All_Cases extends AppCompatActivity {
 
 
         /// Standard Bottom buttons
-        left.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openNextPage(MainActivity.class);
             }
 
         });
-        right.setOnClickListener(new View.OnClickListener() {
+        newcase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openNextPage(Activity_CheckIn.class);
@@ -94,7 +99,7 @@ public class All_Cases extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(MainActivity.class);
+                openNextPage(All_Cases.class);
             }
         });
 

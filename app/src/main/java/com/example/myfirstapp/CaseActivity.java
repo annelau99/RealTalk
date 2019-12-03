@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -46,15 +45,14 @@ public class CaseActivity extends AppCompatActivity {
         contact.setAdapter(contactadapter);
 
 
-        Button submit = (Button) findViewById(R.id.delete_case);
+        Button submit = (Button) findViewById(R.id.submitbutton);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
-        ImageButton right = (ImageButton) findViewById(R.id.rightButton);
-        Button home = (Button) findViewById(R.id.homebutton3);
+        Button home = (Button) findViewById(R.id.homebutton);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(All_Cases.class, b);
+                openNextPage(All_Cases_Pending.class, b);
             }
         });
 
@@ -64,12 +62,7 @@ public class CaseActivity extends AppCompatActivity {
                 openNextPage(Activity_Information.class, b);
             }
         });
-        right.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toastMe(v);
-            }
-        });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
