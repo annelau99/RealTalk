@@ -36,7 +36,7 @@ public class EditCases_Pending extends AppCompatActivity {
         assert message != null;
 
         //hardcoded cases
-        if (message.compareTo("Case 1 ---- Submitted: 1 Minute Ago") == 0) {
+        //if (message.compareTo("Case 1 ---- Submitted: 1 Minute Ago") == 0) {
             /// Read from file and store
             subheading.setText("Pregnancy");
             String[] case1_array = {"Pregnancy symptoms", "Preventing Pregnancy", "Nutrition while Pregnant", "Trying to Conceive"};
@@ -45,7 +45,7 @@ public class EditCases_Pending extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, case1_array);
             lv.setAdapter(adapter);
-        }
+        //}
 
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
