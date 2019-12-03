@@ -6,8 +6,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditCases extends AppCompatActivity {
 
@@ -31,11 +34,17 @@ public class EditCases extends AppCompatActivity {
         heading.setText(message);
 
         assert message != null;
-        if (message.compareTo("Case #1") == 0) {
+
+        //hardcoded cases
+        if (message.compareTo("Case 4 ---- Submitted: Two Hours Ago") == 0) {
             /// Read from file and store
-            subheading.setText(message);
-            /// Show the list
-            /// Delete from a list
+            subheading.setText("Pregnancy");
+            String[] case1_array = {"Pregnancy symptoms", "Preventing Pregnancy", "Nutrition while Pregnant", "Trying to Conceive"};
+            ListView lv = (ListView) findViewById(R.id.outputList);
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, case1_array);
+            lv.setAdapter(adapter);
         }
 
         delete.setOnClickListener(new View.OnClickListener() {
