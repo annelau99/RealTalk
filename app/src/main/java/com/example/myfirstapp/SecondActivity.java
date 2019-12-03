@@ -48,7 +48,7 @@ public class SecondActivity extends AppCompatActivity {
                 number = numInput.getText().toString();
                 sexualActivity = sexInput.getText().toString();
 
-                if (checkInputs())
+                //if (checkInputs())
                     openNextPage();
             }
         });

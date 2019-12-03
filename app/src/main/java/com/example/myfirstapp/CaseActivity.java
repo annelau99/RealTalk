@@ -26,23 +26,26 @@ public class CaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_case);
 
         final Bundle b = getIntent().getExtras();
-        String[] resultArr = b.getStringArray("selectedItems");
-        ListView lv = (ListView) findViewById(R.id.outputList);
+        if (b != null) {
+            String[] resultArr = b.getStringArray("selectedItems");
+            ListView lv = (ListView) findViewById(R.id.outputList);
 
-        String message = b.getString("topic");
-        TextView textView = findViewById(R.id.heading2);
-        textView.setText(message);
+            String message = b.getString("topic");
+            TextView textView = findViewById(R.id.heading2);
+            textView.setText(message);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, resultArr);
-        lv.setAdapter(adapter);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, resultArr);
+            lv.setAdapter(adapter);
+        }
+
 
         /// Contact method
         contact = findViewById(R.id.contact_mthd);
         ArrayAdapter<String>contactadapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item,methods);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        contactadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         contact.setAdapter(contactadapter);
 
 
