@@ -29,7 +29,6 @@ public class Activity_Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__information);
 
-
         Intent intent = getIntent();
         final String message = intent.getStringExtra(Activity_CheckIn.EXTRA_MESSAGE);
 

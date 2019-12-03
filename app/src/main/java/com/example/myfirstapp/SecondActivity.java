@@ -30,7 +30,7 @@ public class SecondActivity extends AppCompatActivity {
         sexInput = findViewById(R.id.sexact_user);
 
 
-        submit = (Button) findViewById(R.id.submit_second_activity);
+        submit = (Button) findViewById(R.id.delete_case);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,8 +6,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
@@ -15,6 +17,8 @@ import android.widget.ListView;
 
 public class CaseActivity extends AppCompatActivity {
 
+    Spinner contact;
+    private static final String[] methods = {"Call", "Text Message", "I do not wish to be contacted"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +37,19 @@ public class CaseActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, resultArr);
         lv.setAdapter(adapter);
 
-        Button submit = (Button) findViewById(R.id.submit_second_activity);
+        /// Contact method
+        contact = findViewById(R.id.contact_mthd);
+        ArrayAdapter<String>contactadapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,methods);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        contact.setAdapter(contactadapter);
+
+
+        Button submit = (Button) findViewById(R.id.delete_case);
         ImageButton left = (ImageButton) findViewById(R.id.leftButton);
         ImageButton right = (ImageButton) findViewById(R.id.rightButton);
         Button home = (Button) findViewById(R.id.homebutton3);
-
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,5 +91,6 @@ public class CaseActivity extends AppCompatActivity {
         intent.putExtras(b);
         startActivity(intent);
     }
+
 
 }
