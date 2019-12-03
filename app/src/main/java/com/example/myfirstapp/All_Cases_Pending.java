@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class All_Cases_Pending extends AppCompatActivity {
     Button logout, newcase, home;
     Button case1;
+    public static final String EXTRA_MESSAGE = "casenumber";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +45,32 @@ public class All_Cases_Pending extends AppCompatActivity {
         });
 
 
+        case1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String buttonText = case1.getText().toString();
+
+                editcases(EditCases_Pending.class, buttonText);
+            }
+        });
+
     }
 
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){
         Intent intent = new Intent(this, ActivityToOpen);
         startActivity(intent);
+    }
+
+    public void editcases(final Class<? extends Activity> ActivityToOpen, String s) {
+        Intent intent = new Intent(this, ActivityToOpen);
+        intent.putExtra(EXTRA_MESSAGE, s);
+        startActivity(intent);
+    }
+
+    public void toastMe(View view, String s){
+        // Toast myToast = Toast.makeText(this, message, duration);
+        Toast myToast = Toast.makeText(this, s,
+                Toast.LENGTH_SHORT);
+        myToast.show();
     }
 }

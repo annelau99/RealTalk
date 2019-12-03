@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 password = passInput.getText().toString();
 
                 //if (checkPhone(PhoneNumber) && checkName(password)) {
-                    openLastTimePage();
+                    openLastTimePage(password);
                 //}
             }
         });

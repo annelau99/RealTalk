@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.content.DialogInterface;
+import android.app.AlertDialog;
+import android.content.Context;
 
 
 public class SecondActivity extends AppCompatActivity {
@@ -48,8 +51,31 @@ public class SecondActivity extends AppCompatActivity {
                 number = numInput.getText().toString();
                 sexualActivity = sexInput.getText().toString();
 
-                //if (checkInputs())
-                    openNextPage();
+                //if (checkInputs()){
+                Context context = v.getContext();
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case DialogInterface.BUTTON_POSITIVE:
+                                openNextPage();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                returnHome();
+                                break;
+                        }
+                    }
+                };
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Do you want to use OmniSMS to store your information?").setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener).show();
+
+
+                //}
+
             }
         });
     }
@@ -74,5 +100,9 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void returnHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }
