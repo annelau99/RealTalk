@@ -50,6 +50,10 @@ public class Activity_Information extends AppCompatActivity {
             details = getResources().getStringArray(R.array.childhealth_array);
         } else if (message.compareTo("Menstruation") == 0) {
             details = getResources().getStringArray(R.array.menstruation_array);
+        } else if (message.compareTo("HIV and AIDS") == 0) {
+            details = getResources().getStringArray(R.array.hiv_array);
+        } else if (message.compareTo("Birth Control") == 0) {
+            details = getResources().getStringArray(R.array.birthcontrol_array);
         }
 
         //details = getResources().getStringArray(R.array.pregnancy_array);
@@ -95,7 +99,7 @@ public class Activity_Information extends AppCompatActivity {
                 Bundle b = new Bundle();
                 b.putStringArray("selectedItems", outputStrArr);
                 b.putString("topic", message);
-                b.putBoolean("case?", true);
+                //b.putBoolean("case?", true);
 
                 openAfterSubmit(CaseActivity.class, b);
             }

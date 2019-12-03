@@ -102,6 +102,25 @@
         <item>Clinics Near Me</item>
     </string-array>
 
+    <string-array name="birthcontrol_array">
+        <item>Emergency Contraception</item>
+        <item>Birth Control and STIs</item>
+        <item>Buying Products</item>
+        <item>Sterilization</item>
+        <item>Condoms</item>
+        <item>Long Acting Reversible Contraception</item>
+        <item>Clinics Near Me</item>
+    </string-array>
+
+    <string-array name="hiv_array">
+        <item>What is HIV/AIDS</item>
+        <item>Prevention Methods</item>
+        <item>Blood Transfusion Safety</item>
+        <item>HIV Testing</item>
+        <item>Treatment and Care</item>
+        <item>Clinics Near Me</item>
+    </string-array>
+
 
     //symptoms
     <string name="pregnancy">Pregnancy</string>
@@ -138,8 +157,9 @@
     <string name="start">PLAY</string>
     <string name="stop">STOP</string>
     //Pregnancy
-    <string name="pregnancyIntro">Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14] Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman.[4] A multiple pregnancy involves more than one offspring, such as with twins.[13] Pregnancy can occur by sexual intercourse or assisted reproductive technology.[6] A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.[14]</string>
-    <string name="pregnancySymp">Missed period.Tender, swollen breasts.Nausea with or without vomiting. Morning sickness. Increased urination. Fatigue. </string>
+    <string name="pregnancyIntro">Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman. A multiple pregnancy involves more than one offspring, such as with twins.Pregnancy can occur by sexual intercourse or assisted reproductive technology. A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.</string>
+    <string name="pregnancySymp">- Missed period\n- Tender, swollen breasts\n- Nausea with or without vomiting\n- Morning sickness\n
+        - Increased urination\n- Fatigue\n </string>
     <string name="pregnancyTODO">Make a prenatal appointment, Consult your provider about medications you are taking, If you smoke, quit, Stop drinking alcohol, Make sure your activities are pregnancy-safe</string>
 
 </resources>
