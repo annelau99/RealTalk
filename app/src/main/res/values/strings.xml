@@ -12,7 +12,7 @@
     <string name="phone_num_ex">(012)3456789</string>
     <string name="password_ex">password</string>
     <string name="new_user">New User</string>
-    <string name="ret_user">Returning User</string>
+    <string name="ret_user">Sign In</string>
 
     //real talk introduction information page
     <string name="intro">Welcome to Real Talk, the purpose of this application is for you

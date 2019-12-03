@@ -70,7 +70,9 @@ public class SecondActivity extends AppCompatActivity {
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setMessage("Do you want to use OmniSMS to store your information?").setPositiveButton("Yes", dialogClickListener)
+                builder.setMessage("Do you want to use OmniSMS to store your information?")
+                        .setTitle("Thank you for signing up!")
+                        .setPositiveButton("Yes", dialogClickListener)
                         .setNegativeButton("No", dialogClickListener).show();
 
 

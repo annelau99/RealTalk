@@ -56,8 +56,8 @@ public class EditCases extends AppCompatActivity {
                     android.R.layout.simple_list_item_1, case1_array);
             lv.setAdapter(adapter);
         } else if (message.compareTo("Case 6 ---- Submitted: Five Days Ago") == 0) {
-            subheading.setText("Menstruation");
-            String[] case1_array = {"Menstrual Products (i.e. Pads, Tampons, Cups)", "Premenstrual Syndrome (PMS)", "Menstrual Cramps", "Irregular Bleeding"};
+            subheading.setText("Birth Control");
+            String[] case1_array = {"Emergency Contraception", "Birth Control and STIs", "Buying Products", "Sterilization"};
             ListView lv = (ListView) findViewById(R.id.outputList);
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -83,10 +83,16 @@ public class EditCases extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (message.compareTo("Case 1 ---- Submitted: 1 Minute Ago") != 0) {
+                if (message.compareTo("Case 4 ---- Submitted: Two Hours Ago") == 0) {
                     openNextPage(All_Cases.class);
+                } else if (message.compareTo("Case 5 ---- Submitted: Three Days Ago") == 0) {
+                    openNextPage(All_Cases.class);
+                } else if (message.compareTo("Case 6 ---- Submitted: Five Days Ago") == 0) {
+                    openNextPage(All_Cases.class);
+                } else if (message.compareTo("Case 1 ---- Submitted: 1 Minute Ago") == 0) {
+                    openNextPage(All_Cases_Pending.class);
                 }
-                openNextPage(All_Cases_Pending.class);
+                //openNextPage(All_Cases_Pending.class);
             }
         });
 
