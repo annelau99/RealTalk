@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 
 public class SecondActivity extends AppCompatActivity {
@@ -25,10 +27,17 @@ public class SecondActivity extends AppCompatActivity {
 
         nameInput = findViewById(R.id.editname);
         numInput = findViewById(R.id.age_num);
-        ageInput = findViewById(R.id.editnumber);
-        genderInput = findViewById(R.id.gender_user);
         sexInput = findViewById(R.id.sexact_user);
 
+        Spinner ageInput = findViewById(R.id.spinner_age);
+        String[] age_options = new String[]{"< 18", "18-24", "25-39", "40-60", "60+"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, age_options);
+        ageInput.setAdapter(adapter);
+
+        Spinner genderInput = findViewById(R.id.spinner_gender);
+        String[] gender_options = new String[]{"Female", "Male", "Non Binary/Gender Non-Conforming", "Other"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, gender_options);
+        genderInput.setAdapter(adapter2);
 
         submit = (Button) findViewById(R.id.submit_second_activity);
 
@@ -37,8 +46,6 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 name = nameInput.getText().toString();
                 number = numInput.getText().toString();
-                age = ageInput.getText().toString();
-                gender = genderInput.getText().toString();
                 sexualActivity = sexInput.getText().toString();
 
                 if (checkInputs())
@@ -54,12 +61,6 @@ public class SecondActivity extends AppCompatActivity {
             return false;
         } else if (TextUtils.isEmpty(number)){
             Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show();
-            return false;
-        } else if (TextUtils.isEmpty(age)){
-            Toast.makeText(this, "Please enter your age", Toast.LENGTH_SHORT).show();
-            return false;
-        } else if (TextUtils.isEmpty(gender)){
-            Toast.makeText(this, "Please enter your gender", Toast.LENGTH_SHORT).show();
             return false;
         } else if (TextUtils.isEmpty(sexualActivity)){
             Toast.makeText(this, "Please enter your sexual activity or health", Toast.LENGTH_SHORT).show();
