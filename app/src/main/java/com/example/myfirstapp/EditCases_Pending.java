@@ -12,9 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EditCases extends AppCompatActivity {
+public class EditCases_Pending extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "case0";
+    public static final String EXTRA_MESSAGE = "casenumber";
     Button delete, update;
     TextView heading, subheading;
 
@@ -24,7 +24,7 @@ public class EditCases extends AppCompatActivity {
         setContentView(R.layout.activity_edit_cases);
 
         Intent intent = getIntent();
-        final String message = intent.getStringExtra(All_Cases.EXTRA_MESSAGE);
+        final String message = intent.getStringExtra(All_Cases_Pending.EXTRA_MESSAGE);
 
         heading = findViewById(R.id.heading);
         subheading = findViewById(R.id.heading2);
@@ -36,7 +36,7 @@ public class EditCases extends AppCompatActivity {
         assert message != null;
 
         //hardcoded cases
-        if (message.compareTo("Case 4 ---- Submitted: Two Hours Ago") == 0) {
+        if (message.compareTo("Case 1 ---- Submitted: 1 Minute Ago") == 0) {
             /// Read from file and store
             subheading.setText("Pregnancy");
             String[] case1_array = {"Pregnancy symptoms", "Preventing Pregnancy", "Nutrition while Pregnant", "Trying to Conceive"};
@@ -45,8 +45,6 @@ public class EditCases extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, case1_array);
             lv.setAdapter(adapter);
-        } else if (message.compareTo("Case 4 ---- Submitted: Two Hours Ago") == 0) {
-
         }
 
         delete.setOnClickListener(new View.OnClickListener() {
