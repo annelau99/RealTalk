@@ -8,17 +8,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.Spinner;
+
 import java.lang.Boolean;
 
 public class All_Cases extends AppCompatActivity {
 
     ImageButton left, right;
-    Button home,pcase1,pcase2;
+    Button home,pcase1,pcase2,case1, case2, case3;
+    public static final String EXTRA_MESSAGE = "casenumber";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_cases);
+        left = (ImageButton) findViewById(R.id.leftButton);
+        right = (ImageButton) findViewById(R.id.rightButton);
+        home = (Button) findViewById(R.id.homebutton);
+
+        pcase1 = findViewById(R.id.pcase1);
+        case1 = findViewById(R.id.case1);
+        case2 = findViewById(R.id.case2);
+        case3 = findViewById(R.id.case3);
 
         final Bundle b = getIntent().getExtras();
         if (b != null) {
@@ -31,12 +43,41 @@ public class All_Cases extends AppCompatActivity {
             }
         }
 
-        left = (ImageButton) findViewById(R.id.leftButton);
-        right = (ImageButton) findViewById(R.id.rightButton);
-        home = (Button) findViewById(R.id.homebutton);
-        pcase1 = findViewById(R.id.pcase1);
-        pcase2 = findViewById(R.id.pcase2);
+        /// On Click of the Cases:
+        pcase1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(InfoPage_Activity.class);
+            }
+        });
 
+        case1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button buttonVal = (Button) findViewById(R.id.case1);
+                String buttonText = buttonVal.getText().toString();
+                editcases(EditCases.class, buttonText);
+            }
+        });
+        case2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button buttonVal = (Button) findViewById(R.id.case2);
+                String buttonText = buttonVal.getText().toString();
+                editcases(EditCases.class, buttonText);
+            }
+        });
+        case3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button buttonVal = (Button) findViewById(R.id.case3);
+                String buttonText = buttonVal.getText().toString();
+                editcases(EditCases.class, buttonText);
+            }
+        });
+
+
+        /// Standard Bottom buttons
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,19 +97,19 @@ public class All_Cases extends AppCompatActivity {
                 openNextPage(MainActivity.class);
             }
         });
-        /// On Click of the Cases:
-        pcase1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openNextPage(InfoPage_Activity.class);
-            }
-        });
+
 
 
     }
 
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){
         Intent intent = new Intent(this, ActivityToOpen);
+        startActivity(intent);
+    }
+
+    public void editcases(final Class<? extends Activity> ActivityToOpen, String s) {
+        Intent intent = new Intent(this, ActivityToOpen);
+        intent.putExtra(EXTRA_MESSAGE, s);
         startActivity(intent);
     }
 }

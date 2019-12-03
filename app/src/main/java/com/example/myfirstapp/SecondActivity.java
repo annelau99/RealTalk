@@ -39,7 +39,7 @@ public class SecondActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, gender_options);
         genderInput.setAdapter(adapter2);
 
-        submit = (Button) findViewById(R.id.submit_second_activity);
+        submit = (Button) findViewById(R.id.delete_case);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

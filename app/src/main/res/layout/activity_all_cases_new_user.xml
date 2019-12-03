@@ -7,45 +7,18 @@
     android:background="@color/screenback"
     tools:context=".All_Cases">
 
-    <TextView
-        android:id="@+id/back_text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homebutton"
-        app:layout_constraintStart_toEndOf="@+id/leftButton"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
-
-    <TextView
-        android:id="@+id/next_text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightButton"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/homebutton"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.0" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/white_background"
         android:layout_width="411dp"
         android:layout_height="520dp"
         android:layout_marginTop="35dp"
-        android:layout_marginBottom="29dp"
         android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/rightButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34">
 
         <TextView
             android:id="@+id/client_reports"
@@ -110,7 +83,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="10dp"/>
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/case1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/twohours" />
+
+                <Button
+                    android:id="@+id/case2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/threedays" />
+
+                <Button
+                    android:id="@+id/case3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fivedays" />
+
+            </LinearLayout>
+
 
 
         </ScrollView>
@@ -148,63 +142,32 @@
                 android:orientation="vertical"
                 android:padding="10dp"
                 tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="5dp"/>
+                tools:layout_editor_absoluteY="5dp">
+
+                <Button
+                    android:id="@+id/pcase1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pregnancy" />
+
+            </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/rightButton"
-        android:layout_width="61dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@color/screenback"
-        android:contentDescription="@string/rightbutton"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/right_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/next_text2"
-        app:layout_constraintTop_toBottomOf="@+id/white_background" />
-
-    <ImageButton
-        android:id="@+id/leftButton"
-        style="@style/Widget.AppCompat.ImageButton"
-        android:layout_width="55dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@color/screenback"
-        android:contentDescription="@string/leftbutton"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/left_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/back_text3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/white_background" />
 
     <Button
         android:id="@+id/homebutton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/buttonColor"
         android:text="@string/home"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next_text2"
-        app:layout_constraintStart_toEndOf="@+id/back_text3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

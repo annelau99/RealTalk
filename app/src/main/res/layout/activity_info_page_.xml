@@ -141,17 +141,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/disclaimer_descrip" />
 
-    <ImageButton
-        android:id="@+id/sound"
+    <Button
+        android:id="@+id/start"
         android:layout_width="79dp"
         android:layout_height="66dp"
         android:layout_marginBottom="36dp"
         android:adjustViewBounds="true"
         android:background="@color/white"
         android:src="@drawable/sound"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toEndOf="@+id/app_name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.671" />
@@ -162,13 +166,16 @@
         android:layout_height="30dp"
         android:layout_marginStart="79dp"
         android:layout_marginEnd="32dp"
+        android:text="@string/stop"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_light"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/sound"
-        app:layout_constraintVertical_bias="0.29"
+        app:layout_constraintTop_toBottomOf="@+id/start"
+        app:layout_constraintVertical_bias="0.225"
         tools:text="@string/stop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
