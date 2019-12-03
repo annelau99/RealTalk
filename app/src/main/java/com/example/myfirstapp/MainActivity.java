@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 PhoneNumber = phoneInput.getText().toString();
                 password = passInput.getText().toString();
 
-                //if (checkPhone(PhoneNumber) && checkName(password)) {
-                    openLastTimePage();
-                //}
+                if (checkPhone(PhoneNumber) && checkName(password)) {
+                    openLastTimePage(password);
+                }
             }
         });
     }

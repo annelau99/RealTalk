@@ -28,7 +28,7 @@ public class All_Cases extends AppCompatActivity {
 
         pcase1 = findViewById(R.id.pcase1);
         pcase2 = findViewById(R.id.pcase2);
-        case1 = findViewById(R.id.pcase1);
+        case1 = findViewById(R.id.case1);
         case2 = findViewById(R.id.case2);
         case3 = findViewById(R.id.case3);
 
@@ -63,7 +63,7 @@ public class All_Cases extends AppCompatActivity {
         case1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Button buttonVal = (Button) findViewById(R.id.pcase1);
+                Button buttonVal = (Button) findViewById(R.id.case1);
                 String buttonText = buttonVal.getText().toString();
                 editcases(EditCases.class, buttonText, b);
             }

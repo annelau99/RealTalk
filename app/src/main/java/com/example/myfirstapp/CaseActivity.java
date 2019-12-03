@@ -38,7 +38,6 @@ public class CaseActivity extends AppCompatActivity {
             lv.setAdapter(adapter);
         }
 
-
         /// Contact method
         contact = findViewById(R.id.contact_mthd);
         ArrayAdapter<String>contactadapter = new ArrayAdapter<String>(this,

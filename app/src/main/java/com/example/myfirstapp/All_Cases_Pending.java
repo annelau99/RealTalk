@@ -11,6 +11,7 @@ import android.widget.Button;
 public class All_Cases_Pending extends AppCompatActivity {
     Button logout, newcase, home;
     Button case1;
+    public static final String EXTRA_MESSAGE = "casenumber";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +42,26 @@ public class All_Cases_Pending extends AppCompatActivity {
                 openNextPage(All_Cases_Pending.class);
             }
         });
+        case1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button buttonVal = (Button) findViewById(R.id.case1);
+                String buttonText = buttonVal.getText().toString();
+                editcases(EditCases.class, buttonText);
+            }
+        });
+
 
 
     }
 
     public void openNextPage(final Class<? extends Activity> ActivityToOpen){
         Intent intent = new Intent(this, ActivityToOpen);
+        startActivity(intent);
+    }
+    public void editcases(final Class<? extends Activity> ActivityToOpen, String s) {
+        Intent intent = new Intent(this, ActivityToOpen);
+        intent.putExtra(EXTRA_MESSAGE, s);
         startActivity(intent);
     }
 }
