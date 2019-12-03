@@ -11,7 +11,8 @@
         android:id="@+id/white_background"
         android:layout_width="411dp"
         android:layout_height="520dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toTopOf="@+id/homebutton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,13 +86,12 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No Cases"
                     android:textAlignment="center" />
             </LinearLayout>
-
 
 
         </ScrollView>
@@ -131,12 +131,12 @@
                 tools:layout_editor_absoluteX="5dp"
                 tools:layout_editor_absoluteY="5dp">
 
-                <TextView
-                    android:id="@+id/textView3"
+                <Button
+                    android:id="@+id/pcase1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="No Cases"
-                    android:textAlignment="center" />
+                    android:text="@string/case1preg" />
+
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -146,7 +146,6 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="36dp"
         android:background="@color/buttonColor"
         android:text="@string/home"
@@ -155,14 +154,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/white_background" />
 
     <Button
         android:id="@+id/logout"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="36dp"
         android:background="@color/buttonColor"
         android:text="Logout"
@@ -171,14 +169,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/white_background" />
 
     <Button
         android:id="@+id/newcase"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="36dp"
         android:background="#266D93"
         android:text="New Case"
@@ -187,6 +184,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/white_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

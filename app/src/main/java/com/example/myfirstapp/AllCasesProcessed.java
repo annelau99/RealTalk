@@ -8,17 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class All_Cases_NewUser extends AppCompatActivity {
+public class AllCasesProcessed extends AppCompatActivity {
+
     Button logout, newcase, home;
+    Button pcase1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_cases_new_user);
+        setContentView(R.layout.activity_all_cases_processed);
 
         home = (Button) findViewById(R.id.homebutton);
         logout = findViewById(R.id.logout);
         newcase = findViewById(R.id.newcase);
+        pcase1 = findViewById(R.id.pcase1);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +39,13 @@ public class All_Cases_NewUser extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(All_Cases_NewUser.class);
+                openNextPage(AllCasesProcessed.class);
+            }
+        });
+        pcase1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNextPage(InfoPage_Activity.class);
             }
         });
 
@@ -46,5 +55,4 @@ public class All_Cases_NewUser extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityToOpen);
         startActivity(intent);
     }
-
 }

@@ -77,8 +77,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //function that opens page for returning user
-    public void openLastTimePage(){
-        Intent intent = new Intent(this, All_Cases.class);
+    public void openLastTimePage(String s){
+        Intent intent = new Intent(this, All_Cases_NewUser.class);
+        if (s.compareTo("Password8!") == 0) {
+            intent = new Intent(this, All_Cases.class);
+        } else if (s.compareTo("Password8!!") == 0){
+            intent = new Intent(this, All_Cases_Pending.class);
+        } else if (s.compareTo("Password9!!") == 0){
+            intent = new Intent(this, AllCasesProcessed.class);
+        }
         startActivity(intent);
     }
 

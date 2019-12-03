@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.652">
 
         <Button
-            android:id="@+id/delete_case"
+            android:id="@+id/submitbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FF3F00"
@@ -95,7 +95,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toTopOf="@+id/delete_case"
+            app:layout_constraintBottom_toTopOf="@+id/submitbutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -175,7 +175,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/homebutton3"
+        android:id="@+id/homebutton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

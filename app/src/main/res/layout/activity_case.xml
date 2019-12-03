@@ -53,23 +53,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652">
 
-        <Button
-            android:id="@+id/delete_case"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/buttonColor"
-            android:text="@string/submit"
-            android:textColor="@color/colorPrimaryDark"
-            android:textColorHint="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.86"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.885" />
-
         <ListView
             android:id="@+id/outputList"
             android:layout_width="wrap_content"
@@ -77,8 +60,7 @@
             android:layout_marginStart="200dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="200dp"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/delete_case"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -87,9 +69,10 @@
 
         <Spinner
             android:id="@+id/contact_mthd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="368dp"
+            android:layout_height="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/outputList" />
 
@@ -112,42 +95,21 @@
         style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="55dp"
         android:layout_height="54dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
         android:background="@color/screenback"
         android:contentDescription="@string/lasttime_heading"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.543"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:scaleType="fitCenter" />
-
-    <ImageButton
-        android:id="@+id/rightButton"
-        android:layout_width="61dp"
-        android:layout_height="54dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@color/screenback"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/right_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintVertical_bias="0.543" />
 
     <TextView
         android:id="@+id/back_text4"
@@ -162,36 +124,34 @@
         app:layout_constraintStart_toEndOf="@+id/leftButton"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
-    <TextView
-        android:id="@+id/next_text4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="44dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightButton"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/homebutton"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
-        android:id="@+id/homebutton3"
+        android:id="@+id/homebutton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="67dp"
         android:layout_marginBottom="28dp"
         android:background="@color/buttonColor"
         android:text="@string/home"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightButton"
         app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <Button
+        android:id="@+id/submitbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/buttonColor"
+        android:text="@string/submit"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homebutton"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
