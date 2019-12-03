@@ -8,24 +8,6 @@
     tools:context=".SecondActivity">
 
     <EditText
-        android:id="@+id/editnumber"
-        android:layout_width="361dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="27dp"
-        android:autofillHints=""
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:hint="@string/agehint"
-        android:inputType="number"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/gender"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newnumber" />
-
-    <EditText
         android:id="@+id/age_num"
         android:layout_width="365dp"
         android:layout_height="50dp"
@@ -48,9 +30,8 @@
         android:layout_width="339dp"
         android:layout_height="46dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="86dp"
-        android:layout_marginBottom="2dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/info"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -68,9 +49,9 @@
         android:layout_width="156dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
         android:text="@string/name"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -84,9 +65,8 @@
         android:layout_width="206dp"
         android:layout_height="38dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="185dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/number"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -95,6 +75,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editname" />
 
+    <Spinner
+        android:id="@+id/spinner_age"
+        android:layout_width="366dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newnumber" />
+
     <EditText
         android:id="@+id/sexact_user"
         android:layout_width="366dp"
@@ -102,7 +95,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
@@ -118,11 +111,10 @@
 
     <TextView
         android:id="@+id/sexual_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="60dp"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="235dp"
+        android:layout_marginEnd="23dp"
         android:text="@string/sex_act"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -130,38 +122,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_user" />
-
-    <EditText
-        android:id="@+id/gender_user"
-        android:layout_width="365dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="23dp"
-        android:autofillHints=""
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:hint="@string/genderhint"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/sexual_activity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender" />
 
     <TextView
         android:id="@+id/newnumber"
         android:layout_width="156dp"
         android:layout_height="35dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="232dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/age"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editnumber"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age_num" />
@@ -191,22 +163,23 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="266dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="6dp"
         android:text="@string/gender"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/gender_user"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editnumber" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_age" />
 
     <Button
         android:id="@+id/delete_case"
         android:layout_width="100dp"
         android:layout_height="34dp"
         android:layout_marginStart="280dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="31dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#F8A489"
         android:fontFamily="sans-serif-light"
@@ -218,5 +191,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sexact_user" />
+
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="363dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/sexual_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
