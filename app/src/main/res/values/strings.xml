@@ -62,7 +62,8 @@
     //what do you want to learn today strings
     <string name="checkin_heading">What do you want to learn about today? </string>
     <string name="select_one">Select one of the topics below.</string>
-    <string name="click_one">Click me to select a topic</string>
+    <string name="click_one">Click to select a topic</string>
+    <string name="click_hold">Press and hold to see what each topic means</string>
     <string name="home">Home</string>
     <string name="back">BACK</string>
     <string name="ask_me">Ask me something else:</string>
@@ -88,6 +89,7 @@
         <item>Nutrition and Eating</item>
         <item>Newborn/Infant Care</item>
         <item>Physical Development</item>
+        <item>Mental Health</item>
         <item>Clinics Near Me</item>
     </string-array>
 
