@@ -48,13 +48,11 @@ public class All_Cases_Pending extends AppCompatActivity {
         case1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Button buttonVal = (Button) findViewById(R.id.case1);
-                String buttonText = buttonVal.getText().toString();
+                String buttonText = case1.getText().toString();
 
                 editcases(EditCases_Pending.class, buttonText);
             }
         });
-
 
     }
 
