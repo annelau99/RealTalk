@@ -110,7 +110,7 @@
         android:inputType="textPersonName"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/submit_second_activity"
+        app:layout_constraintBottom_toTopOf="@+id/delete_case"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -201,7 +201,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editnumber" />
 
     <Button
-        android:id="@+id/submit_second_activity"
+        android:id="@+id/delete_case"
         android:layout_width="100dp"
         android:layout_height="34dp"
         android:layout_marginStart="280dp"
