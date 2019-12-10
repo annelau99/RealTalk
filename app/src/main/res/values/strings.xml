@@ -47,7 +47,7 @@
     <string name="title_notifications">Notifications</string>
 
     //cases waiting + processing page strings
-    <string name="client_reports">Client Reports</string>
+    <string name="client_reports">Your Reports</string>
     <string name="confidential">All information given in these reports will be kept confidential.
     Click the reports to view contents. </string>
     <string name="waiting">Waiting</string>
@@ -160,6 +160,7 @@
     <string name="pregnancyIntro">Pregnancy, also known as gestation, is the time during which one or more offspring develops inside a woman. A multiple pregnancy involves more than one offspring, such as with twins.Pregnancy can occur by sexual intercourse or assisted reproductive technology. A pregnancy may end in a live birth, abortion, or miscarriage, though access to safe abortion care varies globally.</string>
     <string name="pregnancySymp">- Missed period\n- Tender, swollen breasts\n- Nausea with or without vomiting\n- Morning sickness\n
         - Increased urination\n- Fatigue\n </string>
-    <string name="pregnancyTODO">Make a prenatal appointment, Consult your provider about medications you are taking, If you smoke, quit, Stop drinking alcohol, Make sure your activities are pregnancy-safe</string>
+    <string name="pregnancyTODO">- Make a prenatal appointment\n- Consult your provider about medications you are taking\n- If you smoke, quit\n
+        - Stop drinking alcohol\n- Make sure your activities are pregnancy-safe</string>
 
 </resources>

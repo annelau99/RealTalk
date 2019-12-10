@@ -75,7 +75,6 @@ public class SecondActivity extends AppCompatActivity {
                         .setPositiveButton("Yes", dialogClickListener)
                         .setNegativeButton("No", dialogClickListener).show();
 
-
                 }
 
             }

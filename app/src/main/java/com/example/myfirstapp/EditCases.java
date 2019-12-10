@@ -77,7 +77,7 @@ public class EditCases extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CreateDialog();
+                CreateDialog(message);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
@@ -104,22 +104,44 @@ public class EditCases extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void CreateDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to delete the case?")
-                .setTitle("Deleting Case")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        openNextPage(All_Cases_NewUser.class);
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // CANCEL
-                    }
-                });
-        // Create the AlertDialog object and return it
-        builder.create().show();
+    public void CreateDialog(String message){
+        if (message.compareTo("Case 5 ---- Submitted: Three Days Ago") == 0) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure you want to delete the case?")
+                    .setTitle("Deleting Case")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            openNextPage(AllCases_Removed.class);}
+
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // CANCEL
+                        }
+                    });
+            // Create the AlertDialog object and return it
+            builder.create().show();
+         }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Are you sure you want to delete the case?")
+                        .setTitle("Deleting Case")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                openNextPage(All_Cases_NewUser.class);}
+
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // CANCEL
+                            }
+                        });
+                // Create the AlertDialog object and return it
+                builder.create().show();
+
+            }
+
     }
 
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditCases_Pending"></activity>
+        <activity android:name=".AllCases_Removed"></activity>
+        <activity android:name=".EditCases_Pending" />
         <activity android:name=".AllCasesProcessed" />
         <activity android:name=".All_Cases_Pending" />
         <activity android:name=".EditCases" />
