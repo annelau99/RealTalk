@@ -94,7 +94,7 @@ public class InfoPage_Activity extends AppCompatActivity {
     public void CreateDialog() {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure you want to make a call?")
-                    .setTitle("Hello")
+                    .setTitle("Make a Call")
                     .setPositiveButton("Yes (Call)", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {

@@ -164,7 +164,6 @@
         android:adjustViewBounds="true"
         android:background="@drawable/sound"
         android:src="@drawable/sound"
-        android:text="@string/start"
         android:textAlignment="center"
         android:textColor="@android:color/secondary_text_light"
         android:textSize="24sp"
