@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -58,7 +59,12 @@ public class SecondActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which){
                             case DialogInterface.BUTTON_POSITIVE:
-                                openNextPage();
+                                Intent intent = new Intent();
+                                intent.setComponent(new ComponentName("com.example.omnisms", "com.example.omnisms.RegisterService"));
+                                intent.putExtra("package_name", "com.example.myfirstapp");
+                                intent.putExtra("activity_name", "com.example.myfirstapp.All_Cases_NewUser");
+                                startActivity(intent);
+                                finish();
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
