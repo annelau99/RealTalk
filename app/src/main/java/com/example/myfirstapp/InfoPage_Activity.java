@@ -36,7 +36,7 @@ public class InfoPage_Activity extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(All_Cases.class);
+                openNextPage(AllCasesProcessed.class);
             }
 
         });
@@ -91,21 +91,25 @@ public class InfoPage_Activity extends AppCompatActivity {
         }
     }
 
-    public void CreateDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to make a call?")
-                .setTitle("Hello")
-                .setPositiveButton("Yes (Call)", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        openNextPage(All_Cases_NewUser.class);
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // CANCEL
-                    }
-                });
-        // Create the AlertDialog object and return it
-        builder.create().show();
-    }
+    public void CreateDialog() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure you want to make a call?")
+                    .setTitle("Hello")
+                    .setPositiveButton("Yes (Call)", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+//                            finish();
+//                            System.exit(0);
+                             Intent intent = new Intent(Intent.ACTION_DIAL);
+                             startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // CANCEL does nothing
+                        }
+                    });
+            // Create the AlertDialog object and return it
+            builder.create().show();
+        }
 }

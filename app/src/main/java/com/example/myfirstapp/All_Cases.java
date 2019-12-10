@@ -118,7 +118,6 @@ public class All_Cases extends AppCompatActivity {
 
     public void editcases(final Class<? extends Activity> ActivityToOpen, String s, Bundle b) {
         Intent intent = new Intent(this, ActivityToOpen);
-       // b.putString(EXTRA_MESSAGE, s);
         intent.putExtra(EXTRA_MESSAGE, s);
         startActivity(intent);
     }

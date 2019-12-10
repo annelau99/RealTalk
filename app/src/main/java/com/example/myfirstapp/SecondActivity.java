@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.content.DialogInterface;
+import android.app.AlertDialog;
+import android.content.Context;
 
 
 public class SecondActivity extends AppCompatActivity {
@@ -48,8 +52,38 @@ public class SecondActivity extends AppCompatActivity {
                 number = numInput.getText().toString();
                 sexualActivity = sexInput.getText().toString();
 
-                //if (checkInputs())
-                    openNextPage();
+                if (checkInputs()){
+                Context context = v.getContext();
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case DialogInterface.BUTTON_POSITIVE:
+                                Intent intent = new Intent();
+                                intent.setComponent(new ComponentName("com.example.omnisms", "com.example.omnisms.RegisterService"));
+                                intent.putExtra("package_name", "com.example.myfirstapp");
+                                intent.putExtra("activity_name", "com.example.myfirstapp.All_Cases_NewUser");
+                                startActivity(intent);
+                                finish();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                returnHome();
+                                break;
+                        }
+                    }
+                };
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Do you want to use OmniSMS to store your information?")
+                        .setTitle("Thank you for signing up!")
+                        .setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener).show();
+
+
+                }
+
             }
         });
     }
@@ -74,5 +108,9 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void returnHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }

@@ -12,7 +12,7 @@
         android:layout_width="199dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/pregnancy"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -40,8 +40,8 @@
 
             <TextView
                 android:id="@+id/intro"
-                android:layout_width="351dp"
-                android:layout_height="105dp"
+                android:layout_width="344dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:text="@string/pregnancyIntro"
                 android:textColor="@color/colorPrimaryDark"
@@ -50,6 +50,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -57,35 +58,49 @@
         android:id="@+id/time_frame_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="242dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/symptoms"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/time_frame_descrip"
+        app:layout_constraintBottom_toTopOf="@+id/symptom_scroll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
-    <TextView
-        android:id="@+id/time_frame_descrip"
-        android:layout_width="351dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/pregnancySymp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+    <ScrollView
+        android:id="@+id/symptom_scroll"
+        android:layout_width="425dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/disclaimer_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_frame_title" />
+        app:layout_constraintTop_toBottomOf="@+id/time_frame_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/time_frame_descrip"
+                android:layout_width="352dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/pregnancySymp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/disclaimer_title"
@@ -103,7 +118,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_frame_descrip" />
+        app:layout_constraintTop_toBottomOf="@+id/symptom_scroll" />
 
     <TextView
         android:id="@+id/disclaimer_descrip"

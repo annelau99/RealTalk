@@ -81,7 +81,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(All_Cases.class);
+                openNextPage(All_Cases_NewUser.class);
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +93,7 @@ public class Activity_CheckIn extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextPage(MainActivity.class);
+                openNextPage(All_Cases_NewUser.class);
             }
         });
 
